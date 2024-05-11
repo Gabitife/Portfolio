@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^index index.html [NC]
+
+RewriteRule ^([0-9A-Za-z-_]+)$ /$1.html

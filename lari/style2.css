@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .message-container {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .heart {
+    color: red;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .wave-word {
+    display: inline-block;
+    animation-fill-mode: forwards;
+  }
+  
+  .continue-button {
+    display: inline-block;
+    background-color: #4c82af;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continue-button:hover {
+    background-color: #45a049;
+  }
+  
