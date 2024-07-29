@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .message-container {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .heart {
+    color: red;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .wave-word {
+    display: inline-block;
+    animation-fill-mode: forwards;
+  }
+  

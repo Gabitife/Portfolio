@@ -20,9 +20,9 @@
 /* Dark Mode */
 [theme="dark"] {
   --primary-color: rgba(0, 0, 0, 0.774);
-  --primary-color-2: rgba(41, 41, 41, 0.044);
+  --primary-color-2: rgba(39, 57, 75, 0.233);
   --primary-color-3: rgb(110, 110, 110);
-  --background-color: rgb(0, 0, 0);
+  --background-color: rgb(32, 40, 53);
   --secondary-color: white;
   --secondary-color-2: rgb(185, 185, 185);
   --button-background: rgb(235, 235, 235);
@@ -759,7 +759,6 @@ li{
     }
     .nav-menu.active{
         left: 0;
-        z-index: 9999;
     }
   }
 
