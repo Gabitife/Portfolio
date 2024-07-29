@@ -307,6 +307,13 @@ input {
   object-position: 50%;
 }
 
+.home__img2 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50%;
+}
+
 .home__container {
   position: relative;
   height: calc(100vh - var(--header-height));
@@ -1058,6 +1065,9 @@ input {
     margin: 0;
   }
   .home__container, .home__img {
+    height: 200px;
+  }
+  .home__container, .home__img2 {
     height: 200px;
   }
 }
