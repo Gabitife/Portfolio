@@ -140,6 +140,119 @@
         
             </section>
 
+            <!--==================== TEXT ====================-->
+        <section class="video section">
+            <h2 class="section__title">Por trás de uma tela</h2>
+
+            <div class="video__container container">
+                        <p class="video__description">Eu ainda penso muito em como tudo isso é possível. Você tomou conta de todos os meus pensamentos, sendo um tesouro que vale mais do que qualquer coisa neste mundo. Você, tão linda, tão gentil, com um coração puro, faz com que eu me apaixone por você mesmo que estando por enquanto por trás de uma tela. Sinto uma vontade incessante de te conhecer cada vez mais e de poder te encontrar.</p>
+                        <br>
+                        <p class="video__description">Você me transmite tranquilidade, traz felicidade e me motiva a cada dia. Encontrei uma parceira que está sempre ali quando preciso, alguém que me trata tão bem e demonstra seus sentimentos. Você é realmente diferente das demais, e eu jamais deixarei passar todas as oportunidades que tiver de te dizer o que sinto.</p>
+                        <br>
+                        <p class="video__description">Você é alguém que é incrível conhecer e quero levar para a vida toda. É alguém que quero sempre poder abraçar, que faz acelerar as batidas do meu coração. Você merece sempre o que há de melhor e mais bonito neste universo. Meu sonho é estar ao seu lado e ver você conquistando cada um dos seus objetivos, e eu tenho fé de que você vai conseguir. Seu coração é lindo, e diante de todas as coisas estarei com você.</p>
+                        <br>
+                        <p class="video__description">Venho agradecendo todos os dias a Deus por ter colocado você em minha vida, nossas conversas nunca tinha sido tão boas hahaha, afinal agora todos os dias ele precisa escutar coisas como:</p>
+
+                        <style>
+                             #textoOculto {
+                                display: none; /* Oculta o texto inicialmente */
+                                margin-top: 10px;
+                            }
+                            .parte {
+                                opacity: 0; /* Começa invisível */
+                                transition: opacity 0.5s ease; /* Efeito de transição suave */
+                                display: inline; /* Mantém as partes na mesma linha */
+                            }
+                            #botao {
+                                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+                                font-size: 30px; /* Aumenta o tamanho do emoji */
+                            }
+                        </style>
+                    </head>
+                    <body>
+                    
+                        <div id="botao" class="video__description">❤️</div> <!-- Emoji de coração -->
+                        <div id="textoOculto" class="video__description2">
+                             <!-- Você ja viu como os olhinhos dela são lindos?<br> 
+                             Você já viu como o sorriso dela é perfelto? <br> 
+                             Você já viu como ela se esforça pra conseguir o que quer? <br> 
+                             Você ja viu como ela fica linda quando está feliz? <br> 
+                             Você já viu como o cabelo dela é perfeito? <br> 
+                             Você já como ela tenta demonstrar o máximo de carinho por mim? <br> 
+                             você já viu como ela fica bela sem maquiagem? <br> 
+                             Você já viu como ela fica uma gracinha de cabelo solto? <br> 
+                             Você já viu como ela fica impecável em todas as suas peças de roupas? <br> 
+                             Você já viu como ela tira meus melhores sorrisos? <br> 
+                             Você já viu como ela me faz sentir a melhor pessoa ao lado dela? <br> 
+                             Você já viu como ela é incrível em tudo que faz? <br> 
+                             Você já viu como ela é perfeita? -->
+                        </div>
+                    
+                        <script>
+                            let textoOculto = document.getElementById('textoOculto');
+                            let partes = [
+                                "Você ja viu como os olhinhos dela são lindos?",
+                                "Você já viu como o sorriso dela é perfelto?",
+                                "Você já viu como ela se esforça pra conseguir o que quer?",
+                                "Você ja viu como ela fica linda quando está feliz?",
+                                "Você já viu como o cabelo dela é perfeito?",
+                                "Você já como ela tenta demonstrar o máximo de carinho por mim?",
+                                "você já viu como ela fica bela sem maquiagem?",
+                                "Você já viu como ela fica uma gracinha de cabelo solto?",
+                                "Você já viu como ela fica impecável em todas as suas peças de roupas?",
+                                "Você já viu como ela tira meus melhores sorrisos?",
+                                "Você já viu como ela me faz sentir a melhor pessoa ao lado dela?",
+                                "Você já viu como ela é incrível em tudo que faz?",
+                                "Você já viu como ela é perfeita?"
+                            ]; // Array com as partes do texto
+                    
+                            let index = 0;
+                            let mostrando = false; // Variável para controlar o estado de exibição
+
+                            document.getElementById('botao').onclick = function() {
+                                if (!mostrando) {
+                                    textoOculto.style.display = "block"; // Mostra o texto
+                                    index = 0; // Reinicia o índice
+                                    mostrarParte(); // Inicia a exibição das partes
+                                } else {
+                                    ocultarTexto(); // Oculta o texto
+                                }
+                                mostrando = !mostrando; // Alterna o estado
+                            };
+
+                            // Função para mostrar as partes uma a uma
+                            function mostrarParte() {
+                                if (index < partes.length) {
+                                    let parteDiv = document.createElement('div'); // Cria um novo div para cada parte
+                                    parteDiv.className = 'parte'; // Adiciona a classe para aplicar o efeito
+                                    parteDiv.innerHTML = partes[index] + '<br>'; // Define o conteúdo da parte e adiciona <br>
+                                    textoOculto.appendChild(parteDiv); // Adiciona a parte ao texto oculto
+                                    setTimeout(() => {
+                                        parteDiv.style.opacity = 1; // Aumenta a opacidade para 1
+                                    }, 10); // Pequeno delay para garantir que a transição funcione
+                                    index++;
+                                    setTimeout(mostrarParte, 1000); // Chama a função novamente após 1 segundo
+                                }
+                            }
+
+                            // Função para ocultar o texto
+                            function ocultarTexto() {
+                                const partesDivs = document.querySelectorAll('.parte'); // Seleciona todas as partes
+                                partesDivs.forEach((div, i) => {
+                                    setTimeout(() => {
+                                        div.style.opacity = 0; // Diminui a opacidade para 0
+                                    }, i * 500); // Delay para cada parte
+                                });
+                                setTimeout(() => {
+                                    textoOculto.innerHTML = ''; // Limpa o texto após todas as partes desaparecerem
+                                    textoOculto.style.display = "none"; // Oculta o texto
+                                }, partesDivs.length * 500); // Delay para garantir que todas as partes tenham desaparecido
+                            }
+                        </script>
+                        
+                
+            </div>
+        </section>
 
         <main class="main">
             <!--==================== HOME3 ====================-->

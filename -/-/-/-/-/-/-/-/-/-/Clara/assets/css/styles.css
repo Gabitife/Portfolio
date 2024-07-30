@@ -578,6 +578,11 @@ input {
   margin-bottom: var(--mb-2-0);
 }
 
+.video__description2 {
+  text-align: center;
+  margin-bottom: var(--mb-2-0);
+}
+
 .video__content {
   position: relative;
 }
@@ -1040,6 +1045,9 @@ input {
     grid-template-columns: .7fr;
   }
   .video__description {
+    padding: 0 3rem;
+  }
+  .video__description2 {
     padding: 0 3rem;
   }
   .place__container {
