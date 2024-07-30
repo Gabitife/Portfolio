@@ -47,10 +47,11 @@ anims.map(clickTog);
             "Gosto infinitamente de você meu bem."
         ];
 
-        botaoInicial.onclick = function() {
+        // Mostra o botão inicial por 3 segundos e depois esconde
+        setTimeout(() => {
             botaoInicial.style.display = 'none'; // Esconde o botão inicial
             criarBotoesAleatorios(); // Cria os botões aleatórios
-        };
+        }, 3000); // 3000 milissegundos = 3 segundos
 
         function criarBotoesAleatorios() {
             const posicoes = []; // Array para armazenar posições ocupadas
@@ -82,7 +83,7 @@ anims.map(clickTog);
                 botao.style.top = top; // Define a posição aleatória
                 botao.onclick = function() {
                     if (i === 0) {
-                        window.location.href = 'Clara/index.html'; // Altere para o nome da sua segunda página
+                        window.location.href = 'Clara/index.html'; // Altera para o caminho correto da segunda página
                     } else {
                         mostrarOverlay(mensagens[i - 1]); // Mostra a sobreposição com a mensagem correspondente
                     }
