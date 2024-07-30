@@ -156,10 +156,19 @@
 
 
 
-
-
-
 #botaoInicial {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #00000000; /* Cor de fundo para destacar o botão */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Efeito de transição */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px 40px;
     font-size: 24px;
     cursor: pointer;
@@ -171,6 +180,25 @@
     position: relative;
     overflow: hidden;
 }
+
+#botaoInicial:hover {
+    background-color: #ffffff00; /* Cor ao passar o mouse */
+    
+}
+
+/* 
+#botaoInicial {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+} */
 
 .botaoAleatorio {
     position: absolute;
