@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div id="botaoInicial">Oiee, preparei algo para você e espero que goste. É simples mas é de coração ❤️</div>
+    <!-- <div id="botaoInicial">Oiee, preparei algo para você e espero que goste. É simples mas é de coração ❤️</div> -->
     <div class="overlay" id="overlay">
         <div id="mensagemOverlay"></div>
         <button class="botaoFechar" id="botaoFechar">Fechar</button>
@@ -47,11 +47,8 @@ anims.map(clickTog);
             "Gosto infinitamente de você meu bem."
         ];
 
-        // Mostra o botão inicial por 3 segundos e depois esconde
-        setTimeout(() => {
-            botaoInicial.style.display = 'none'; // Esconde o botão inicial
-            criarBotoesAleatorios(); // Cria os botões aleatórios
-        }, 3000); // 3000 milissegundos = 3 segundos
+        // Cria os botões aleatórios imediatamente
+        criarBotoesAleatorios();
 
         function criarBotoesAleatorios() {
             const posicoes = []; // Array para armazenar posições ocupadas
@@ -78,7 +75,7 @@ anims.map(clickTog);
 
                 const botao = document.createElement('button');
                 botao.className = 'botaoAleatorio';
-                botao.innerText = i === 0 ? 'Continue' : 'Continue'; // Um botão leva à segunda página
+                botao.innerText = i === 0 ? 'Continue por aqui' : 'Continue por aqui'; // Um botão leva à segunda página
                 botao.style.left = left; // Define a posição aleatória
                 botao.style.top = top; // Define a posição aleatória
                 botao.onclick = function() {
