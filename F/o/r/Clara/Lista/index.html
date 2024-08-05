@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Galeria de Imagens</title>
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+
+    <div>
+        <label for="day-select">Selecione um dia:</label>
+        <select id="day-select" onchange="filterImages()">
+            <option value="all">TODOS</option>
+            <option value="1">Dia 001</option>
+            <option value="2">Dia 002</option>
+            <option value="3">Dia 003</option>
+            <option value="4">Dia 004</option>
+            <option value="5">Dia 005</option>
+        </select>
+    </div>
+    
+    <div class="image-container" data-day="1">
+        <div class="image-message message-1">Dia 001</div>
+        <img src="assets/img/cartA3.png" alt="Imagem 1" onclick="openOverlay('Seu sorriso ilumina até os dias mais nublados.', 'message-1')">
+    </div>
+    <div class="image-container" data-day="2">
+        <div class="image-message message-2">Dia 002</div>
+        <img src="assets/img/cartA5.png" alt="Imagem 2" onclick="openOverlay('A sua presença traz paz ao meu coração.', 'message-2')">
+    </div>
+    <div class="image-container" data-day="3">
+        <div class="image-message message-3">Dia 003</div>
+        <img src="assets/img/cartA4.png" alt="Imagem 3" onclick="openOverlay('Você é uma fonte de alegria na minha vida.', 'message-3')">
+    </div>
+    <div class="image-container" data-day="4">
+        <div class="image-message message-4">Dia 004</div>
+        <img src="assets/img/cartA5.png" alt="Imagem 4" onclick="openOverlay('Cada momento ao seu lado é especial e único.', 'message-4')">
+    </div>
+    <div class="image-container" data-day="5">
+        <div class="image-message message-5">Dia 005</div>
+        <img src="assets/img/cartA3.png" alt="Imagem 5" onclick="openOverlay('Sua bondade transforma o mundo ao seu redor.', 'message-5')">
+    </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlay-content">
+            <span class="close-button" onclick="closeOverlay()">&times;</span>
+            <div id="overlay-message"></div>
+        </div>
+    </div>
+    
+    <script>
+        function openOverlay(message, className) {
+            const overlay = document.getElementById('overlay');
+            const overlayContent = document.getElementById('overlay-content');
+            overlayContent.className = 'overlay-content ' + className; // Adiciona a classe da mensagem
+            overlay.style.display = 'flex'; // Exibe a sobreposição
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 10); // Atraso para permitir a transição
+            document.getElementById('overlay-message').innerText = message;
+        }
+    
+        function closeOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                overlay.style.display = 'none'; // Oculta a sobreposição após a animação
+            }, 500); // Tempo para coincidir com a animação de fechamento
+        }
+    
+        function filterImages() {
+            const selectedDay = document.getElementById('day-select').value;
+            const containers = document.querySelectorAll('.image-container');
+    
+            containers.forEach(container => {
+                const day = container.getAttribute('data-day');
+                if (selectedDay === 'all' || selectedDay === day) {
+                    container.style.display = 'block'; // Mostra a imagem
+                } else {
+                    container.style.display = 'none'; // Oculta a imagem
+                }
+            });
+        }
+</script>
+
+
+</body>
+</html>

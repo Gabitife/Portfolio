@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    min-height: 1000vh;
+	background: radial-gradient(circle at bottom, #7da8d8 0%, #ffffffc1 100%);
+
+}
+
+.image-container {
+    top: 100px;
+    position: relative;
+    width: 100%;
+    max-width: 415px;
+    margin: -90px; /* Espaço entre as imagens */
+}
+
+
+.image-message {
+    position: absolute;
+    top: 55px; /* Distância do topo da imagem */
+    left: 35%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #000000; /* Cor do texto */
+    background-color: #000000; /* Fundo semi-transparente */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Transição suave ao aumentar */
+    font-family: 'Dancing Script', cursive; /* Altera a fonte para cursiva */
+}
+
+
+.image-container:hover .image-message {
+    display: block; /* Garante que a mensagem fique visível */
+    transform: translateX(-50%) scale(1.15); /* Aumenta 15% ao passar o mouse */
+    z-index: 1; /* Garante que a mensagem fique acima da imagem */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease; /* Transição suave ao aumentar */
+    z-index: 1; /* Garante que a mensagem fique acima da imagem */
+}
+
+.image-container:hover img {
+    transform: scale(1.15); /* Aumenta 15% ao passar o mouse */
+}
+
+.close-button {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#overlay-message {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    
+    background-color: rgba(0, 0, 0, 0.144);
+    background-size: 1000px;
+    border-radius: 10px;
+}
+
+.overlay {
+    display: none; /* Oculta a sobreposição por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    
+}
+.overlay.active {
+    display: flex; /* Exibe a sobreposição quando ativa */
+}
+.overlay-content {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    
+}
+
+.overlay-content {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 100px;
+
+    width: 50%;
+    max-width: 50%;
+    height: 300PX;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    padding: 60px;
+}
+
+label {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva para o rótulo */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-right: 10px; /* Espaço à direita do rótulo */
+}
+
+#day-select {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva para o select */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #000000; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+#day-select:hover {
+    border-color: #000000; /* Cor da borda ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.message-1 { background-image: url('assets/img/LittleMoment99601.png'); }
+.message-2 { background-image: url('assets/img/LittleMoment99702.png'); }
+.message-3 { background-image: url('assets/img/LittleMoment99803.png'); }
+.message-4 { background-image: url('assets/img/LittleMoment99904.png'); }
+.message-5 { background-image: url('assets/img/LittleMoment100005.png'); }
+
+
+
+
+
+
+
+
