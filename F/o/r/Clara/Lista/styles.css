@@ -3,7 +3,7 @@ body {
     flex-direction: column; 
     align-items: center; 
     background-color: #f0f0f0;
-    margin: 0;
+    margin: 10px;
     padding: 20px;
     min-height: 1000vh;
 	background: radial-gradient(circle at bottom, #7da8d8 0%, #ffffffc1 100%);
@@ -63,12 +63,13 @@ body {
 
 #overlay-message {
     position: fixed;
-    width: 50%;
-    height: 50%;
+    width: 47%;
+    height: 37%;
     display: flex;
     align-items: center;
     justify-items: center;
     justify-content: center;
+    padding: 10px;
 
     font-size: 30px;
     
@@ -155,6 +156,22 @@ label {
 .message-3 { background-image: url('assets/img/LittleMoment99803.png'); }
 .message-4 { background-image: url('assets/img/LittleMoment99904.png'); }
 .message-5 { background-image: url('assets/img/LittleMoment100005.png'); }
+.message-6 { background-image: url('assets/img/LittleMoment100106.png'); }
+/* .message-7 { background-image: url('assets/img/'); } */
+/* .message-8 { background-image: url('assets/img/'); } */
+/* .message-9 { background-image: url('assets/img/'); } */
+/* .message-10 { background-image: url('assets/img/'); } */
+/* .message-11 { background-image: url('assets/img/'); } */
+/* .message-12 { background-image: url('assets/img/'); } */
+/* .message-13 { background-image: url('assets/img/'); } */
+/* .message-14 { background-image: url('assets/img/'); } */
+/* .message-15 { background-image: url('assets/img/'); } */
+/* .message-16 { background-image: url('assets/img/'); } */
+/* .message-17 { background-image: url('assets/img/'); } */
+/* .message-18 { background-image: url('assets/img/'); } */
+/* .message-19 { background-image: url('assets/img/'); } */
+/* .message-21 { background-image: url('assets/img/'); } */
+/* .message-22 { background-image: url('assets/img/'); } */
 
 
 
