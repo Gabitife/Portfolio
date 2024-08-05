@@ -37,7 +37,7 @@ body {
 .image-container:hover .image-message {
     display: block; /* Garante que a mensagem fique visível */
     transform: translateX(-50%) scale(1.15); /* Aumenta 15% ao passar o mouse */
-    z-index: 1; /* Garante que a mensagem fique acima da imagem */
+    /* z-index: 1; */
 }
 
 .image-container img {
@@ -50,6 +50,7 @@ body {
 .image-container:hover img {
     transform: scale(1.15); /* Aumenta 15% ao passar o mouse */
 }
+
 
 .close-button {
     position: absolute;
