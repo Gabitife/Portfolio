@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <title>Galeria de Imagens</title>
+    <title>Cartas</title>
     <script src="script.js"></script>
 
 </head>
@@ -26,7 +26,7 @@
             <option value="10">Dia 010</option>
             <option value="11">Dia 011</option>
             <option value="12">Dia 012</option>
-            <!-- <option value="13">Dia 013</option> -->
+            <option value="13">Dia 013</option>
             <!-- <option value="14">Dia 014</option> -->
             <!-- <option value="15">Dia 015</option> -->
             <!-- <option value="16">Dia 016</option> -->
@@ -40,73 +40,410 @@
         </select>
     </div>
     
-    <div class="image-container" data-day="1">
-        <div class="image-message message-1">Dia 001</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 1" onclick="openOverlay('Seu sorriso ilumina até os dias mais nublados.', 'message-1')"></div>
-    <div class="image-container" data-day="2">
-        <div class="image-message message-2">Dia 002</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 2" onclick="openOverlay('A sua presença traz paz ao meu coração.', 'message-2')"></div>
-    <div class="image-container" data-day="3">
-        <div class="image-message message-3">Dia 003</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 3" onclick="openOverlay('Você é uma fonte de alegria na minha vida.', 'message-3')"></div>
-    <div class="image-container" data-day="4">
-        <div class="image-message message-4">Dia 004</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 4" onclick="openOverlay('Cada momento ao seu lado é especial e único.', 'message-4')"></div>
-    <div class="image-container" data-day="5">
-        <div class="image-message message-5">Dia 005</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 5" onclick="openOverlay('Sua bondade transforma o mundo ao seu redor.', 'message-5')"></div>
-    <div class="image-container" data-day="6">
-        <div class="image-message message-6">Dia 006</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 6" onclick="openOverlay('Você tem um jeito especial de fazer tudo parecer melhor.', 'message-6')"></div>
-    <div class="image-container" data-day="7">
-        <div class="image-message message-7">Dia 007</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 7" onclick="openOverlay('Sua risada é a melodia que eu mais amo ouvir.', 'message-7')"></div>
-    <div class="image-container" data-day="8">
-        <div class="image-message message-8">Dia 008</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 8" onclick="openOverlay('A sua força me inspira a ser uma pessoa melhor.', 'message-8')"></div>
-    <div class="image-container" data-day="9">
-        <div class="image-message message-9">Dia 009</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 9" onclick="openOverlay('Você é uma luz que brilha intensamente na minha vida.', 'message-9')"></div>
-    <div class="image-container" data-day="10">
-        <div class="image-message message-10">Dia 010</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 10" onclick="openOverlay('Seu jeito de ser é simplesmente encantador.', 'message-10')"></div>
-    <div class="image-container" data-day="11">
-        <div class="image-message message-11">Dia 011</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 11" onclick="openOverlay('Cada dia com você é um dia maravilhoso.', 'message-11')"></div>
-    <div class="image-container" data-day="12">
-        <div class="image-message message-12">Dia 012</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 12" onclick="openOverlay('Você faz meu coração sorrir a cada instante.', 'message-12')"></div>
-    <!-- <div class="image-container" data-day="13">
-        <div class="image-message message-13">Dia 013</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 13" onclick="openOverlay('Sua beleza vai além do que os olhos podem ver.', 'message-13')"></div> -->
-    <!-- <div class="image-container" data-day="14">
-        <div class="image-message message-14">Dia 014</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 14" onclick="openOverlay('Você é um sonho que se tornou realidade.', 'message-14')"></div> -->
-    <!-- <div class="image-container" data-day="15">
-        <div class="image-message message-15">Dia 015</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 15" onclick="openOverlay('A sua essência é pura magia e encantamento.', 'message-15')"></div> -->
-    <!-- <div class="image-container" data-day="16">
-        <div class="image-message message-16">Dia 016</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 16" onclick="openOverlay('Você traz cor e vida aos meus dias.', 'message-16')"></div> -->
-    <!-- <div class="image-container" data-day="17">
-        <div class="image-message message-17">Dia 017</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 17" onclick="openOverlay('Seu carinho é o melhor remédio para qualquer tristeza.', 'message-17')"></div> -->
-    <!-- <div class="image-container" data-day="18">
-        <div class="image-message message-18">Dia 018</div>
-        <img src="assets/img/cartA4.png" alt="Imagem 18" onclick="openOverlay('Você é uma pessoa incrível, cheia de amor e luz.', 'message-18')"></div> -->
-    <!-- <div class="image-container" data-day="19">
-        <div class="image-message message-19">Dia 019</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 19" onclick="openOverlay('Seu olhar tem o poder de aquecer minha alma.', 'message-19')"></div> -->
-    <!-- <div class="image-container" data-day="20">
-        <div class="image-message message-20">Dia 020</div>
-        <img src="assets/img/cartA3.png" alt="Imagem 20" onclick="openOverlay('A sua felicidade é a minha maior alegria.', 'message-20')"></div> -->
-    <!-- <div class="image-container" data-day="21">
-        <div class="image-message message-21">Dia 021</div>
-        <img src="assets/img/cartA5.png" alt="Imagem 21" onclick="openOverlay('Você é uma inspiração constante para mim.', 'message-21')"></div> -->
+        <div class="image-container" data-day="1">
+            <div class="image-message message-1">Dia 001</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 1" onclick="openOverlay('Seu sorriso ilumina até os dias mais nublados.', 'message-1')">
+        </div>
+        <div class="image-container" data-day="2">
+            <div class="image-message message-2">Dia 002</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 2" onclick="openOverlay('A sua presença traz paz ao meu coração.', 'message-2')">
+        </div>
+        <div class="image-container" data-day="3">
+            <div class="image-message message-3">Dia 003</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 3" onclick="openOverlay('Você é uma fonte de alegria na minha vida.', 'message-3')">
+        </div>
+        <div class="image-container" data-day="4">
+            <div class="image-message message-4">Dia 004</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 4" onclick="openOverlay('Cada momento ao seu lado é especial e único.', 'message-4')">
+        </div>
+        <div class="image-container" data-day="5">
+            <div class="image-message message-5">Dia 005</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 5" onclick="openOverlay('Sua bondade transforma o mundo ao seu redor.', 'message-5')">
+        </div>
+        <div class="image-container" data-day="6">
+            <div class="image-message message-6">Dia 006</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 6" onclick="openOverlay('Você tem um jeito especial de fazer tudo parecer melhor.', 'message-6')">
+        </div>
+        <div class="image-container" data-day="7">
+            <div class="image-message message-7">Dia 007</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 7" onclick="openOverlay('Sua risada é a melodia que eu mais amo ouvir.', 'message-7')">
+        </div>
+        <div class="image-container" data-day="8">
+            <div class="image-message message-8">Dia 008</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 8" onclick="openOverlay('A sua força me inspira a ser uma pessoa melhor.', 'message-8')">
+        </div>
+        <div class="image-container" data-day="9">
+            <div class="image-message message-9">Dia 009</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 9" onclick="openOverlay('Você é uma luz que brilha intensamente na minha vida.', 'message-9')">
+        </div>
+        <div class="image-container" data-day="10">
+            <div class="image-message message-10">Dia 010</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 10" onclick="openOverlay('Seu jeito de ser é simplesmente encantador.', 'message-10')">
+        </div>
+        <div class="image-container" data-day="11">
+            <div class="image-message message-11">Dia 011</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 11" onclick="openOverlay('Cada dia com você é um dia maravilhoso.', 'message-11')">
+        </div>
+        <div class="image-container" data-day="12">
+            <div class="image-message message-12">Dia 012</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 12" onclick="openOverlay('Você faz meu coração sorrir a cada instante.', 'message-12')">
+        </div>
+        <div class="image-container" data-day="13">
+            <div class="image-message message-13">Dia 013</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 13" onclick="openOverlay('Sua beleza vai além do que os olhos podem ver.', 'message-13')">
+        </div>
+        <!-- <div class="image-container" data-day="14">
+            <div class="image-message message-14">Dia 014</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 14" onclick="openOverlay('Você é um sonho que se tornou realidade.', 'message-14')"></div> -->
+        <!-- <div class="image-container" data-day="15">
+                <div class="image-message message-15">Dia 015</div>
+                <img src="assets/img/cartA3.png" alt="Imagem 15" onclick="openOverlay('Seu amor é a força que me impulsiona a alcançar novos horizontes.', 'message-15')">
+        </div>
+        <div class="image-container" data-day="16">
+                <div class="image-message message-16">Dia 016</div>
+                <img src="assets/img/cartA5.png" alt="Imagem 16" onclick="openOverlay('Você é o encanto que enfeita meu mundo, tornando tudo mais bonito.', 'message-16')">
+        </div>
+        <div class="image-container" data-day="17">
+                <div class="image-message message-17">Dia 017</div>
+                <img src="assets/img/cartA3.png" alt="Imagem 17" onclick="openOverlay('Seu carinho é a melodia que toca em meu coração, criando uma sinfonia de amor.', 'message-17')">
+        </div>
+        <div class="image-container" data-day="18">
+                <div class="image-message message-18">Dia 018</div>
+                <img src="assets/img/cartA4.png" alt="Imagem 18" onclick="openOverlay('Você é a razão pela qual eu escrevo sobre o amor, como se fosse uma obra-prima.', 'message-18')">
+        </div>
+        <div class="image-container" data-day="19">
+                <div class="image-message message-19">Dia 019</div>
+                <img src="assets/img/cartA3.png" alt="Imagem 19" onclick="openOverlay('Seu olhar é um convite para mergulhar em um oceano de sentimentos profundos.', 'message-19')">
+        </div>
+        <div class="image-container" data-day="20">
+                <div class="image-message message-20">Dia 020</div>
+                <img src="assets/img/cartA3.png" alt="Imagem 20" onclick="openOverlay('A sua felicidade é a minha maior alegria.', 'message-20')">
+        </div> 
+        <div class="image-container" data-day="21">
+            <div class="image-message message-21">Dia 021</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 21" onclick="openOverlay('Seu amor é a arte que colore minha vida com tons vibrantes de felicidade.', 'message-21')">
+        </div>
+        <div class="image-container" data-day="22">
+            <div class="image-message message-22">Dia 022</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 22" onclick="openOverlay('Você é a razão pela qual eu me perco em pensamentos sobre o futuro.', 'message-22')">
+        </div>
+        <div class="image-container" data-day="23">
+            <div class="image-message message-23">Dia 023</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 23" onclick="openOverlay('Seu olhar é o mapa que me guia para os tesouros do seu coração.', 'message-23')">
+        </div>
+        <div class="image-container" data-day="24">
+            <div class="image-message message-24">Dia 024</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 24" onclick="openOverlay('Você é o broto que brota em meu jardim, trazendo beleza e alegria.', 'message-24')">
+        </div>
+        <div class="image-container" data-day="25">
+            <div class="image-message message-25">Dia 025</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 25" onclick="openOverlay('Seu carinho é a luz que ilumina meu caminho, mesmo nas noites mais escuras.', 'message-25')">
+        </div>
+        <div class="image-container" data-day="26">
+            <div class="image-message message-26">Dia 026</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 26" onclick="openOverlay('Você é a sinfonia que embala meus sonhos e me faz acreditar em um amanhã melhor.', 'message-26')">
+        </div>
+        <div class="image-container" data-day="27">
+            <div class="image-message message-27">Dia 027</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 27" onclick="openOverlay('Seu amor é a aventura que eu sempre sonhei viver, cheia de emoção e descobertas.', 'message-27')">
+        </div>
+        <div class="image-container" data-day="28">
+            <div class="image-message message-28">Dia 028</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 28" onclick="openOverlay('Você é a razão pela qual eu me sinto tão vivo, como se estivesse flutuando nas nuvens.', 'message-28')">
+        </div>
+        <div class="image-container" data-day="29">
+            <div class="image-message message-29">Dia 029</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 29" onclick="openOverlay('Seu sorriso é o farol que me guia através das tempestades da vida.', 'message-29')">
+        </div>
+        <div class="image-container" data-day="30">
+            <div class="image-message message-30">Dia 030</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 30" onclick="openOverlay('Você é a estrela que brilha mais intensamente no meu céu noturno.', 'message-30')">
+        </div>
+        <div class="image-container" data-day="31">
+            <div class="image-message message-31">Dia 031</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 31" onclick="openOverlay('Seu jeito de ver a vida é inspirador.', 'message-31')">
+        </div>
+        <div class="image-container" data-day="32">
+            <div class="image-message message-32">Dia 032</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 32" onclick="openOverlay('Você traz alegria até nos momentos mais simples.', 'message-32')">
+        </div>
+        <div class="image-container" data-day="33">
+            <div class="image-message message-33">Dia 033</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 33" onclick="openOverlay('O seu carinho me faz sentir amado todos os dias.', 'message-33')">
+        </div>
+        <div class="image-container" data-day="34">
+            <div class="image-message message-34">Dia 034</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 34" onclick="openOverlay('Você é um raio de sol em um dia chuvoso.', 'message-34')">
+        </div>
+        <div class="image-container" data-day="35">
+            <div class="image-message message-35">Dia 035</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 35" onclick="openOverlay('Sua autenticidade é o que mais admiro em você.', 'message-35')">
+        </div>
+        <div class="image-container" data-day="36">
+            <div class="image-message message-36">Dia 036</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 36" onclick="openOverlay('Você tem o dom de fazer as pessoas se sentirem bem.', 'message-36')">
+        </div>
+        <div class="image-container" data-day="37">
+            <div class="image-message message-37">Dia 037</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 37" onclick="openOverlay('Seu amor é a força que me impulsiona a seguir em frente.', 'message-37')">
+        </div>
+        <div class="image-container" data-day="38">
+            <div class="image-message message-38">Dia 038</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 38" onclick="openOverlay('Você é como uma estrela que brilha no meu céu.', 'message-38')">
+        </div>
+        <div class="image-container" data-day="39">
+            <div class="image-message message-39">Dia 039</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 39" onclick="openOverlay('Sua sabedoria é um presente que valorizo muito.', 'message-39')">
+        </div>
+        <div class="image-container" data-day="40">
+            <div class="image-message message-40">Dia 040</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 40" onclick="openOverlay('Você é a razão pela qual o amor existe.', 'message-40')">
+        </div>        
+        <div class="image-container" data-day="41">
+            <div class="image-message message-41">Dia 041</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 41" onclick="openOverlay('Seu amor é a aventura que eu sempre quis viver, cheia de surpresas e descobertas.', 'message-41')">
+        </div>
+        <div class="image-container" data-day="42">
+            <div class="image-message message-42">Dia 042</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 42" onclick="openOverlay('Você é a essência que transforma meu cotidiano em algo extraordinário.', 'message-42')">
+        </div>
+        <div class="image-container" data-day="43">
+            <div class="image-message message-43">Dia 043</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 43" onclick="openOverlay('Seu olhar é a janela para a alma que eu quero explorar eternamente.', 'message-43')">
+        </div>
+        <div class="image-container" data-day="44">
+            <div class="image-message message-44">Dia 044</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 44" onclick="openOverlay('Você é o botão que desabrocha em meu coração, trazendo cores vibrantes à minha vida.', 'message-44')">
+        </div>
+        <div class="image-container" data-day="45">
+            <div class="image-message message-45">Dia 045</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 45" onclick="openOverlay('Seu carinho é como um cobertor quentinho que me envolve em momentos de tristeza.', 'message-45')">
+        </div>
+        <div class="image-container" data-day="46">
+            <div class="image-message message-46">Dia 046</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 46" onclick="openOverlay('Você é a razão pela qual eu me sinto completo, como um quebra-cabeça que se encaixa perfeitamente.', 'message-46')">
+        </div>
+        <div class="image-container" data-day="47">
+            <div class="image-message message-47">Dia 047</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 47" onclick="openOverlay('Seu sorriso é o sol que ilumina os caminhos que ainda vamos percorrer juntos.', 'message-47')">
+        </div>
+        <div class="image-container" data-day="48">
+            <div class="image-message message-48">Dia 048</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 48" onclick="openOverlay('Você é a magia que torna cada dia uma nova oportunidade de amar.', 'message-48')">
+        </div>
+        <div class="image-container" data-day="49">
+            <div class="image-message message-49">Dia 049</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 49" onclick="openOverlay('Seu amor é a luz que brilha em meio à escuridão, sempre me guiando.', 'message-49')">
+        </div>
+        <div class="image-container" data-day="50">
+            <div class="image-message message-50">Dia 050</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 50" onclick="openOverlay('Você é a canção que toca em meu coração, criando harmonias de felicidade.', 'message-50')">
+        </div>
+        <div class="image-container" data-day="51">
+            <div class="image-message message-51">Dia 051</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 51" onclick="openOverlay('Seu olhar é um mistério que eu adoraria desvendar a cada instante.', 'message-51')">
+        </div>
+        <div class="image-container" data-day="52">
+            <div class="image-message message-52">Dia 052</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 52" onclick="openOverlay('Você é a pintura mais bela em minha galeria de memórias.', 'message-52')">
+        </div>
+        <div class="image-container" data-day="53">
+            <div class="image-message message-53">Dia 053</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 53" onclick="openOverlay('Seu amor é como um farol que me guia nas tempestades da vida.', 'message-53')">
+        </div>
+        <div class="image-container" data-day="54">
+            <div class="image-message message-54">Dia 054</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 54" onclick="openOverlay('Você é a razão pela qual eu coleciono momentos e não coisas.', 'message-54')">
+        </div>
+        <div class="image-container" data-day="55">
+            <div class="image-message message-55">Dia 055</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 55" onclick="openOverlay('Seu carinho é a trilha sonora que embala meus sonhos mais doces.', 'message-55')">
+        </div>
+        <div class="image-container" data-day="56">
+            <div class="image-message message-56">Dia 056</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 56" onclick="openOverlay('Você é o capítulo mais emocionante da minha história de amor.', 'message-56')">
+        </div>
+        <div class="image-container" data-day="57">
+            <div class="image-message message-57">Dia 057</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 57" onclick="openOverlay('Seu sorriso é a luz que acende a chama da minha felicidade.', 'message-57')">
+        </div>
+        <div class="image-container" data-day="58">
+            <div class="image-message message-58">Dia 058</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 58" onclick="openOverlay('Você é a razão pela qual eu acredito que o amor pode mudar o mundo.', 'message-58')">
+        </div>
+        <div class="image-container" data-day="59">
+            <div class="image-message message-59">Dia 059</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 59" onclick="openOverlay('Seu jeito de amar é como um abraço caloroso em um dia frio.', 'message-59')">
+        </div>
+        <div class="image-container" data-day="60">
+            <div class="image-message message-60">Dia 060</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 60" onclick="openOverlay('Você é a estrela que faz meu universo brilhar com intensidade.', 'message-60')">
+        </div>         
+        <div class="image-container" data-day="61">
+            <div class="image-message message-61">Dia 061</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 61" onclick="openOverlay('Seu olhar é um reflexo da profundidade do amor que sinto por você.', 'message-61')">
+        </div>
+        <div class="image-container" data-day="62">
+            <div class="image-message message-62">Dia 062</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 62" onclick="openOverlay('Você é a razão pela qual eu me sinto tão sortudo por ter encontrado um amor verdadeiro.', 'message-62')">
+        </div>
+        <div class="image-container" data-day="63">
+            <div class="image-message message-63">Dia 063</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 63" onclick="openOverlay('Seu amor é a força que me motiva a superar todos os obstáculos da vida.', 'message-63')">
+        </div>
+        <div class="image-container" data-day="64">
+            <div class="image-message message-64">Dia 064</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 64" onclick="openOverlay('Você é a luz que brilha em meu coração, tornando cada dia mais especial.', 'message-64')">
+        </div>
+        <div class="image-container" data-day="65">
+            <div class="image-message message-65">Dia 065</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 65" onclick="openOverlay('Seu sorriso é a razão pela qual eu acredito que a vida é cheia de beleza e esperança.', 'message-65')">
+        </div>
+        <div class="image-container" data-day="66">
+            <div class="image-message message-66">Dia 066</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 66" onclick="openOverlay('Você é a rosa que perfuma minha vida, trazendo alegria e amor a cada instante.', 'message-66')">
+        </div>
+        <div class="image-container" data-day="67">
+            <div class="image-message message-67">Dia 067</div>
+            <img src="assets/img/cartA4.png" alt="Imagem 67" onclick="openOverlay('Seu carinho é o sol que ilumina meu dia, aquecendo minha alma.', 'message-67')">
+        </div>
+        <div class="image-container" data-day="68">
+            <div class="image-message message-68">Dia 068</div>
+            <img src="assets/img/cartA3.png" alt="Imagem 68" onclick="openOverlay('Você é a brisa fresca que renova meu espírito e me faz sentir em casa.', 'message-68')">
+        </div>
+        <div class="image-container" data-day="69">
+            <div class="image-message message-69">Dia 069</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 69" onclick="openOverlay('Seu riso é a poesia que faz meu coração dançar em uma melodia de alegria.', 'message-69')">
+        </div>
+        <div class="image-container" data-day="70">
+            <div class="image-message message-70">Dia 070</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 70" onclick="openOverlay('Você é o sol que ilumina minha vida, fazendo cada amanhecer parecer um milagre.', 'message-70')">
+        </div>
+        <div class="image-container" data-day="71">
+            <div class="image-message message-71">Dia 071</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 71" onclick="openOverlay('Você é a luz que brilha na minha escuridão, trazendo esperança e alegria.', 'message-71')">
+        </div>
+        <div class="image-container" data-day="72">
+            <div class="image-message message-72">Dia 072</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 72" onclick="openOverlay('Seu jeito de amar é um bálsamo que cura todas as feridas do meu coração.', 'message-72')">
+        </div>
+        <div class="image-container" data-day="73">
+            <div class="image-message message-73">Dia 073</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 73" onclick="openOverlay('Você é a razão pela qual eu me sinto completo e realizado em cada aspecto da vida.', 'message-73')">
+        </div>
+        <div class="image-container" data-day="74">
+            <div class="image-message message-74">Dia 074</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 74" onclick="openOverlay('Seu sorriso é a chave que abre as portas do meu coração, permitindo que o amor flua livremente.', 'message-74')">
+        </div>
+        <div class="image-container" data-day="75">
+            <div class="image-message message-75">Dia 075</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 75" onclick="openOverlay('Você é a rosa que enfeita meu jardim de sonhos, tornando tudo mais bonito e vibrante.', 'message-75')">
+        </div>
+        <div class="image-container" data-day="76">
+            <div class="image-message message-76">Dia 076</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 76" onclick="openOverlay('Seu amor é a melodia que embala meus pensamentos e me faz sonhar acordado.', 'message-76')">
+        </div>
+        <div class="image-container" data-day="77">
+            <div class="image-message message-77">Dia 077</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 77" onclick="openOverlay('Você é a razão pela qual eu desejo explorar cada canto do mundo ao seu lado.', 'message-77')">
+        </div>
+        <div class="image-container" data-day="78">
+            <div class="image-message message-78">Dia 078</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 78" onclick="openOverlay('Seu carinho é a luz que ilumina meu caminho, mesmo nas noites mais escuras.', 'message-78')">
+        </div>
+        <div class="image-container" data-day="79">
+            <div class="image-message message-79">Dia 079</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 79" onclick="openOverlay('Você é a pessoa com quem eu quero compartilhar todas as minhas conquistas e alegrias.', 'message-79')">
+        </div>
+        <div class="image-container" data-day="80">
+            <div class="image-message message-80">Dia 080</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 80" onclick="openOverlay('Você é a brisa suave que refresca meu coração em dias quentes de verão.', 'message-80')">
+        </div> -->
+        
 
 
-
-
+        <!-- <div class="image-container" data-day="81">
+            <div class="image-message message-81">Dia 081</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 81" onclick="openOverlay('', 'message-81')">
+        </div>
+        <div class="image-container" data-day="82">
+            <div class="image-message message-82">Dia 082</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 82" onclick="openOverlay('', 'message-82')">
+        </div>
+        <div class="image-container" data-day="83">
+            <div class="image-message message-83">Dia 083</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 83" onclick="openOverlay('', 'message-83')">
+        </div>
+        <div class="image-container" data-day="84">
+            <div class="image-message message-84">Dia 084</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 84" onclick="openOverlay('', 'message-84')">
+        </div>
+        <div class="image-container" data-day="85">
+            <div class="image-message message-85">Dia 085</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 85" onclick="openOverlay('', 'message-85')">
+        </div>
+        <div class="image-container" data-day="86">
+            <div class="image-message message-86">Dia 086</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 86" onclick="openOverlay('', 'message-86')">
+        </div>
+        <div class="image-container" data-day="87">
+            <div class="image-message message-87">Dia 087</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 87" onclick="openOverlay('', 'message-87')">
+        </div>
+        <div class="image-container" data-day="88">
+            <div class="image-message message-88">Dia 088</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 88" onclick="openOverlay('', 'message-88')">
+        </div>
+        <div class="image-container" data-day="89">
+            <div class="image-message message-89">Dia 089</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 89" onclick="openOverlay('', 'message-89')">
+        </div>
+        <div class="image-container" data-day="90">
+            <div class="image-message message-90">Dia 090</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 90" onclick="openOverlay('', 'message-90')">
+        </div>
+        <div class="image-container" data-day="91">
+            <div class="image-message message-91">Dia 091</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 91" onclick="openOverlay('', 'message-91')">
+        </div>
+        <div class="image-container" data-day="92">
+            <div class="image-message message-92">Dia 092</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 92" onclick="openOverlay('', 'message-92')">
+        </div>
+        <div class="image-container" data-day="93">
+            <div class="image-message message-93">Dia 093</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 93" onclick="openOverlay('', 'message-93')">
+        </div>
+        <div class="image-container" data-day="94">
+            <div class="image-message message-94">Dia 094</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 94" onclick="openOverlay('', 'message-94')">
+        </div>
+        <div class="image-container" data-day="95">
+            <div class="image-message message-95">Dia 095</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 95" onclick="openOverlay('', 'message-95')">
+        </div>
+        <div class="image-container" data-day="96">
+            <div class="image-message message-96">Dia 096</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 96" onclick="openOverlay('', 'message-96')">
+        </div>
+        <div class="image-container" data-day="97">
+            <div class="image-message message-97">Dia 097</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 97" onclick="openOverlay('', 'message-97')">
+        </div>
+        <div class="image-container" data-day="98">
+            <div class="image-message message-98">Dia 098</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 98" onclick="openOverlay('', 'message-98')">
+        </div>
+        <div class="image-container" data-day="99">
+            <div class="image-message message-99">Dia 099</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 99" onclick="openOverlay('', 'message-99')">
+        </div>
+        <div class="image-container" data-day="100">
+            <div class="image-message message-100">Dia 100</div>
+            <img src="assets/img/cartA5.png" alt="Imagem 100" onclick="openOverlay('', 'message-100')">
+        </div>
+                 -->
+                               
 
 
 
