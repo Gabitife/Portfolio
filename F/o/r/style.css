@@ -208,7 +208,7 @@ a:focus-visible {
   content: "";
   position: absolute;
   width: 100%;
-  height: 4500px;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: 0;
@@ -236,9 +236,11 @@ a:focus-visible {
   font-style: normal;
   margin: 5rem 0 5vh;
   line-height: 1;
+  align-items: center;
   justify-content: center;
   display: flex;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* Media queries para responsividade */
@@ -459,4 +461,116 @@ a:focus-visible {
     left: 0;
     width: 100%;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+
+  --bg-image-1: url("assets/img/LittleMoment100005.png");
+  --bg-image-2: url("assets/img/LittleMoment100106.png");
+  --bg-image-3: url("assets/img/LittleMoment100207.png");
+}
+
+
+
+.wrapper {
+  height: 4000px;
+  padding-bottom: 100px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  touch-action: pan-y; /* Permite rolar apenas na direção vertical */
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 100ms linear;
+  background-color: #222;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.c1 {
+  background-image: var(--bg-image-1);
+}
+
+.c2 {
+  background-image: var(--bg-image-2);
+}
+
+.c3 {
+  background-image: var(--bg-image-3);
+}
+
+.wrapper {
+  background-size: cover;
+  backgroun-position: bottom center;
+  background-repeat: no-repeat;
   
+  &:after{
+    content: "";
+    background: linear-gradient(to right top, #040404ff, #21212111);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(12px);
+  }
+
+  &:has(#c1:checked) {
+    background-image: var(--bg-image-1);
+  }
+  &:has(#c2:checked) {
+    background-image: var(--bg-image-2);
+  }
+  &:has(#c3:checked) {
+    background-image: var(--bg-image-3);
+  }
+}
+  
+.home__img2 {
+ top: 50px;
+}

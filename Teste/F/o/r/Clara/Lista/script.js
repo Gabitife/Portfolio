@@ -14,12 +14,3 @@ function closeOverlay() {
         overlay.style.display = 'none'; // Oculta a sobreposição após a animação
     }, 500); // Tempo para coincidir com a animação de fechamento
 }
-
-
-
-
-
-
-
-
-
