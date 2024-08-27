@@ -642,21 +642,23 @@ a:focus-visible {
   z-index: 2;
   width: 100%;
   max-width: 1200px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .nav-links-left,
 .nav-links-right {
   display: flex;
-  width: 50%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
 .nav-links-left {
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .nav-links-right {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .nav-links li {
