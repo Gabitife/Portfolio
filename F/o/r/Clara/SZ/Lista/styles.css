@@ -126,6 +126,7 @@ label {
 }
 
 #day-select {
+    margin-top: 50px;
     font-family: 'Dancing Script', cursive; /* Fonte cursiva para o select */
     font-size: 24px; /* Tamanho da fonte */
     padding: 10px; /* Espaçamento interno */
