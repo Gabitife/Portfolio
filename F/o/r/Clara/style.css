@@ -478,10 +478,10 @@ a:focus-visible {
   #scrollBtn {
     position: fixed;
     font-size: 20px;
-    bottom: 40px;
+    bottom: 70px;
     right: 40px;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.681);
