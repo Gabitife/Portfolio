@@ -611,9 +611,6 @@ a:focus-visible {
 
 
 
-
-
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -630,7 +627,7 @@ a:focus-visible {
   height: auto;
   min-height: 60px;
   transition: opacity 0.5s ease;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .nav-links {
@@ -692,108 +689,65 @@ a:focus-visible {
 .nav-links a.active::after {
   width: 100%;
 }
-@media (max-width: 1920px) {
-  .nav-links-left,
-  .nav-links-right {
-    width: 50%;
-  }
+
+
+
+
+
+
+
+
+.hamburger {
+  margin-top: 15px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+.line {
+  height: 4px;
+  width: 50px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px 0;
+  z-index: 1000;
+  color: #000;
+  z-index: 200;
+}
+.overlay {
+  list-style-type: none; /* Remove a numeração */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  transition: transform 100ms linear;
 }
 
-@media (max-width: 1200px) {
-  .nav-links-left,
-  .nav-links-right {
-    width: 50%;
-  }
+.overlay-content {
+  list-style-type: none; /* Remove a numeração */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  line-height: 100px;
+  transition: transform 100ms linear;
 }
 
-@media (max-width: 992px) {
-  .nav-links-left,
-  .nav-links-right {
-    width: 50%;
-  }
-
-  section h1,
-  section h2 {
-    font-size: 2.2em;
-  }
-
-  section p {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 0.5rem;
-    height: auto;
-  }
+@media (max-width: 1000px) {
   .nav-links {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    position: static;
-    transform: none;
-    left: auto;
+      display: none;
   }
-  .nav-links-left,
-  .nav-links-right {
-    width: auto;
-    justify-content: center;
-  }
-  .nav-links li {
-    margin: 0.25rem 0.5rem;
-  }
-  .logo {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    left: auto;
-    transform: none;
-    width: 60px;
-  }
-  .logo img {
-    width: 100%;
-  }
-  section {
-    padding-top: 120px;
-  }
-}
-
-@media (max-width: 480px) {
   .navbar {
-    padding: 1.5rem;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-  }
-  .nav-links a {
-    font-size: 1.5rem;
-  }
-  .logo {
-    width: 50px;
-  }
-  section h1,
-  section h2 {
-    font-size: 1.8em;
-  }
-  section p {
-    font-size: 1.5em;
-  }
+    height: 100px;
 }
-
-@media (max-width: 360px) {
-  .nav-links li {
-    margin: 0.15rem 0.25rem;
-  }
-  .nav-links a {
-    font-size: 1.5rem;
-  }
-  section h1,
-  section h2 {
-    font-size: 1.6em;
-  }
-  section p {
-    font-size: 1.5em;
+  .hamburger {
+      display: flex;
   }
 }

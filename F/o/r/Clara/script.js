@@ -10,3 +10,16 @@ document.querySelector('.enter').addEventListener('touchstart', function(event) 
     document.getElementById('scrollBtn').style.display = 'block'; // Mostra o botão ao tocar
     document.querySelector('.navbar').style.display = 'block'; // Mostra a navbar ao tocar
 });
+
+
+
+const hamburger = document.getElementById('hamburger');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+    overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+});
+
+overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+});
