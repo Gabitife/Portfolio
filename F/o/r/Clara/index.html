@@ -200,8 +200,26 @@
                 <div class="fullview"></div>
                 <div class="enter"><span>Continuar SZ</span></div>
               </section>
-              <button id="scrollBtn">↓</button>
-              <section class="content">
+
+              <button id="scrollBtn" style="display: none;">↓</button>
+
+              <nav class="navbar" style="display: none;">
+                <ul class="nav-links">
+                  <div class="nav-links-left">
+                    <li><a href="#intr">Introdução</a></li>
+                    <li><a href="#ini">Inicio de tudo</a></li>
+                    <li><a href="#ano">A notificação</a></li>
+                  </div>
+                  <div class="nav-links-right">
+                    <li><a href="#por">Por trás de uma tela</a></li>
+                    <li><a href="#nos">Nós</a></li>
+                    <li><a href="#tan">Tantas coisas</a></li>
+                    <li><a href="#fim">Fim?</a></li>
+                  </div>
+                </ul>
+              </nav>
+
+              <section class="content" id="intr">
                 <div class="content__header">
                   <h2>Introdução</h2>
                 </div>
@@ -226,7 +244,7 @@
                 </section>
             </section>
 
-            <section class="content">
+            <section class="content" id="ini">
               <div class="content__header">
                 <h2>Inicio de tudo</h2>
               </div>
@@ -249,7 +267,7 @@
                 </section>
             </section>            
 
-            <section class="content">
+            <section class="content" id="ano">
               <div class="content__header">
                 <h2>A notificação</h2>
               </div>
@@ -271,7 +289,7 @@
             
                 </section>
 
-                <section class="content">
+                <section class="content" id="por"></section>>
                   <div class="content__header">
                     <h2>Por trás de uma tela</h2>
                   </div>
@@ -376,7 +394,7 @@
             
                 </section>
 
-                <section class="content">
+                <section class="content" id="nos">
                   <div class="content__header">
                     <h2>Nós</h2>
                   </div>
@@ -398,7 +416,7 @@
                 
                     </section>
 
-                    <section class="content">
+                    <section class="content" id="tan">
                       <div class="content__header">
                         <h2>Tantas coisas</h2>
                       </div>
@@ -418,7 +436,7 @@
                     
                         </section>
 
-                        <section class="content">
+                        <section class="content" id="fim">
                           <div class="content__header">
                             <h2>Fim?</h2>
                           </div>
@@ -464,10 +482,81 @@
           
             <!--=============== MAIN JS ===============-->
             <script src="js.js"></script>
+            <script src="script.js"></script>
             <script>
               document.getElementById('scrollBtn').onclick = function() {
                   document.getElementById('ms').scrollIntoView({ behavior: 'smooth' });
               };
+
+
+
+
+
+
+              // navbar
+              document.addEventListener("DOMContentLoaded", function () {
+              // Smooth Scrolling
+              document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                  });
+                });
+              });
+
+              // Sticky Navbar
+              const navbar = document.querySelector(".navbar");
+              const sticky = navbar.offsetTop;
+
+              function makeNavbarSticky() {
+                if (window.pageYOffset >= sticky) {
+                  navbar.classList.add("sticky");
+                } else {
+                  navbar.classList.remove("sticky");
+                }
+              }
+
+              window.onscroll = function () {
+                makeNavbarSticky();
+                highlightActiveSection();
+              };
+
+              // Active Link Highlighting
+              function highlightActiveSection() {
+                const sections = document.querySelectorAll("section");
+                const navLinks = document.querySelectorAll(".nav-links a");
+
+                sections.forEach((section) => {
+                  const sectionTop = section.offsetTop;
+                  const sectionHeight = section.clientHeight;
+                  if (
+                    window.pageYOffset >= sectionTop - 50 &&
+                    window.pageYOffset < sectionTop + sectionHeight - 50
+                  ) {
+                    const id = section.getAttribute("id");
+                    navLinks.forEach((link) => {
+                      link.classList.remove("active");
+                      if (link.getAttribute("href") === `#${id}`) {
+                        link.classList.add("active");
+                      }
+                    });
+                  }
+                });
+              }
+
+              // Fade-in Effect
+              navbar.style.opacity = 0;
+              let opacity = 0;
+              const fadeIn = setInterval(() => {
+                if (opacity < 1) {
+                  opacity += 0.1;
+                  navbar.style.opacity = opacity;
+                } else {
+                  clearInterval(fadeIn);
+                }
+              }, 50);
+            });
             </script>
 
           </body>
