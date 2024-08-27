@@ -565,7 +565,7 @@ a:focus-visible {
 
 .wrapper {
   background-size: cover;
-  backgroun-position: bottom center;
+  background-position: top;  
   background-repeat: no-repeat;
   
   &:after{
