@@ -475,7 +475,26 @@ a:focus-visible {
 
 
 
+  #scrollBtn {
+    position: fixed;
+    font-size: 20px;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.681);
+    border-radius: 50%; /* Botão redondo */
+    cursor: pointer;
+    z-index: 1000;
+    outline: none;
+    transition: background-color 0.3s;
+}
 
+#scrollBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 
 

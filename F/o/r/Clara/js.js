@@ -370,3 +370,6 @@ slider.addEventListener('touchmove', (e) => {
 
 
 
+
+
+

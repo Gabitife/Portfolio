@@ -200,6 +200,7 @@
                 <div class="fullview"></div>
                 <div class="enter"><span>Continuar SZ</span></div>
               </section>
+              <button id="scrollBtn">🡻</button>
               <section class="content">
                 <div class="content__header">
                   <h2>Introdução</h2>
@@ -429,7 +430,7 @@
                             <p class="video__description">Saiba que gosto muito de você, tá? E sempre pode contar comigo. Mais uma coisa também: continue sempre sorrindo, pois seu sorriso é o mais lindo deste mundo. Mesmo que às vezes seja difícil, eu estarei lá com você. SZ.</p>
                           </div>
                         </section>
-                        <main class="main"> 
+                        <main id="" class="main"> 
                           <section class="main"></section>
                             <!--==================== HOME6 ====================-->
                             <section class="home" id="tantas">
@@ -442,7 +443,8 @@
                             <div class="wrapper">
                               <input type="radio" checked="true" name="slider" id="c2" style="display: none">
 
-                              <section class="home__img2">
+                              <section id="ms" class="home__img2">
+
                                 <iframe src="SZ/Lista/index.html" top="100px" width="100%" height="100%" frameborder="0"></iframe>
                               </section>    
                         </section>  
@@ -462,6 +464,11 @@
           
             <!--=============== MAIN JS ===============-->
             <script src="js.js"></script>
+            <script>
+              document.getElementById('scrollBtn').onclick = function() {
+                  document.getElementById('ms').scrollIntoView({ behavior: 'smooth' });
+              };
+            </script>
 
           </body>
 
