@@ -468,7 +468,7 @@
                             <p class="video__description">Saiba que gosto muito de você, tá? E sempre pode contar comigo. Mais uma coisa também: continue sempre sorrindo, pois seu sorriso é o mais lindo deste mundo. Mesmo que às vezes seja difícil, eu estarei lá com você. SZ.</p>
                           </div>
                         </section>
-                        <main id="" class="main"> 
+                        <main id="tela" class="main"> 
                           <section class="main"></section>
                             <!--==================== HOME6 ====================-->
                             <section class="home" id="tantas">
@@ -504,14 +504,26 @@
             <script src="js.js"></script>
             <script src="script.js"></script>
             <script>
+              window.addEventListener('scroll', function() {
+                  const section = document.getElementById('main');
+                  const rect = section.getBoundingClientRect();
+
+                  if (rect.top <= 0 && rect.bottom >= 0) {
+                      document.querySelector('.navbar').classList.add('hidden');
+                      document.querySelector('.overlay').classList.add('hidden');
+                  } else {
+                      document.querySelector('.navbar').classList.remove('hidden');
+                      document.querySelector('.overlay').classList.remove('hidden');
+                  }
+              });
+
+
+
+
+
               document.getElementById('scrollBtn').onclick = function() {
                   document.getElementById('ms').scrollIntoView({ behavior: 'smooth' });
               };
-
-
-
-
-
 
               // navbar
               document.addEventListener("DOMContentLoaded", function () {
