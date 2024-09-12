@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gabriel - Maria</title>
+  <link rel="stylesheet" href="./style3.css">
+  <link rel="stylesheet" href="./style2.css">
+  <link rel="stylesheet" href="mediaqueries2.css" />
+
+</head>
+<body>
+
+  <header>
+    <nav id="desktop-nav" class="navbar">
+      <div class="logo">
+        <img
+        id="about"
+        class="icon2 color-icon"
+        src="assets/logoGabriel.png"
+        src-light="assets/g1.png"
+        src-dark="assets/g2.png"
+        alt="Color them icon"
+      /></div>
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="#about">Inicio</a></li>
+        <li class="nav-item"><a href="#experience">Sobre Gabriel</a></li>
+        <li class="nav-item"><a href="#experience">Sobre Maria</a></li>
+        <li class="nav-item"><a href="#projects">Projetos</a></li>
+        <li class="nav-item"><a href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a href="#contact">Contato</a></li>
+          <!-- <img
+            id="modeToggle" class="icon color-icon" src="./assets/theme_light.png" src-light="./assets/theme_light.png" src-dark="./assets/theme_dark.png" alt="Color them icon"/> -->
+        </li>
+      </ul>
+      <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+  </nav>
+  </header>
+
+
+
+    <!-- HERO SECTION // ABOUT -->
+
+
+    <div class="parallax" id="parallax"></div>
+
+<section class="carouselsec">
+  <div class="carousel" id="carousel">
+    <div class="cartao" onclick="scrollToCard(0)"><img src="assets/Street.jpg" alt="Cartão 1"><h2>Street</h2></div>
+    <div class="cartao" onclick="scrollToCard(1)"><img src="assets/Casamento.jpg" alt="Cartão 2"><h2>Casamentos</h2></div>
+    <div class="cartao" onclick="scrollToCard(2)"><img src="assets/Crianca.jpg" alt="Cartão 3"><h2>Crianças</h2></div>
+    <div class="cartao" onclick="scrollToCard(3)"><img src="assets/Carro.jpg" alt="Cartão 4"><h2>Automoveis</h2></div>
+    <div class="cartao" onclick="scrollToCard(4)"><img src="assets/Paisagens.jpg" alt="Cartão 5"><h2>Paisagens</h2></div>
+    <div class="cartao" onclick="scrollToCard(5)"><img src="assets/Arquiteturas.jpg" alt="Cartão 6"><h2>Arquiteturas</h2></div>
+    <div class="cartao" onclick="scrollToCard(6)"><img src="assets/Festas.jpg" alt="Cartão 7"><h2>Festas</h2></div>
+    <div class="cartao" onclick="scrollToCard(7)"><img src="assets/Comidas.jpg" alt="Cartão 8"><h2>Comidas</h2></div>
+</div>
+</section>
+
+  <!-- <section id="galeria">
+    <p class="section__text__p1">Seja Bem vindo ao...<p>
+        <h1 class="title">Registro de memórias e experiências</h1>
+          <div class="text-container">
+            <p>
+              Explore um registro visual dos momentos mais significativos da minha vida por meio de uma galeria de imagens cuidadosamente selecionadas. 
+              Esta página é um espaço dedicado a compartilhar meu trabalho e as experiências capturadas em imagens ao longo dos dias. 
+              Cada foto é mais do que apenas uma imagem; é um reflexo de momentos únicos e memoráveis que moldaram minha jornada. 
+              Cada fotografia conta uma história e convida você a vivenciar esses momentos especiais comigo.
+            </p>
+          </div>
+    </section> -->
+  
+
+
+        <div class="x-gallery" id="galeria">
+          <div class="xg-tag-filter">
+            <a class="xg-btn xg-btn-tag xg-btn-active" data-tag="all">Todos</a>
+            <a class="xg-btn xg-btn-tag" data-tag="Pessoas">Pessoas</a>
+            <a class="xg-btn xg-btn-tag" data-tag="Cenário">Cenário</a>
+            <a class="xg-btn xg-btn-tag" data-tag="Abstrato">Abstrato</a>
+          </div>
+            
+          <div class="xg-container">
+            <div class="xg-loader">
+              <div class="xg-loader-text">Carregando...</div>
+            </div>
+            <div class="xg-img-preview">
+          </div>
+          </div>
+        </div>
+      </div>
+        <article>
+          <button class="scrollTop" onclick="voltarAoTopo();">
+            <img src="./arrow.svg" alt="">
+          </button>
+        </article>
+
+
+<!-- partial -->
+
+
+  <script>
+        function scrollToCard(index) {
+            const cartao = carousel.children[index];
+            const offset = (index - 1) * (cartao.clientWidth + 20); // 20 é a margem
+            carousel.scrollTo({
+                left: offset,
+                behavior: 'smooth'
+            });
+        }
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('active');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 1; // velocidade de rolagem
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+  </script> 
+
+
+
+  <script>
+            const images = [
+            "assets/back1.jpg",
+            "assets/back2.jpg",
+            "assets/back3.jpg",
+            "assets/back4.jpg" 
+            
+            // Substitua pelo caminho da segunda imagem
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('parallax').style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        setInterval(changeBackground, 5000); // Troca a cada 5 segundos
+        changeBackground(); // Define a primeira imagem
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script><script  src="./script3.js"></script>
+  <script src="script2.js"></script>
+
+  
+
+</body>
+</html>
