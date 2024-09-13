@@ -855,6 +855,7 @@ li{
 
 
 .nav-menu2{
+  margin-top: 20px;
   display: flex;
   text-align: center;
   flex-wrap: wrap;
@@ -983,6 +984,8 @@ li{
 
 
 .prepreset01 {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   margin: 5px;
   display: flex;
   justify-content: center;
@@ -1039,6 +1042,29 @@ li{
   color: rgba(0, 170, 243, 0.908);
   text-align: center;
   z-index: 100000;
+}
+.textcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 28px;
+}
+.textcenterp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.textcenter1 {
+  padding-top: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .button005 {
   margin-top: 330px;
