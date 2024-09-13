@@ -1041,7 +1041,6 @@ li{
   transform: translate(-50%, -50%);
   color: rgba(0, 170, 243, 0.908);
   text-align: center;
-  z-index: 100000;
 }
 .textcenter {
   display: flex;
