@@ -927,7 +927,7 @@ li{
   justify-content: center;
   align-items: center;
   contato: auto;
-  transition: background-image 1s ease-in-out; /* Transição suave */
+  transition: background-image 2s ease-in-out; /* Transição suave */
 }
 
 .contato {
