@@ -208,6 +208,29 @@ top: 18px;
   background-color: #00000009;
 }
 
+.xg-btn2{
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  padding: 10px 16px;
+  width: auto;
+  margin-top: 15px;
+  margin-inline: 5px;
+  margin-bottom: 15px;
+  outline: 1px solid var(--c2);
+  /*background: var(--c2);*/
+  /* color: var(--c0); */
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-decoration-color: var(--primary-color);
+  user-select: none;
+  cursor: pointer;
+  border-radius: 1px;
+  background-color: #00000009;
+}
+
 .xg-btn-active{
   color: var(--c6);
 }
