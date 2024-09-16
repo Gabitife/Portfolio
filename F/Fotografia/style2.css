@@ -1065,6 +1065,44 @@ li{
   margin-left: 5px;
   margin-right: 5px;
 }
+
+
+
+
+
+
+
+.textcenter2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 28px;
+}
+.textcenterp2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.textcenter12 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
 .button005 {
   margin-top: 330px;
   padding: 10px 20px;
@@ -1080,4 +1118,50 @@ li{
   transition: background-color 0.3s;
   color: #000;
   background-color: #ffffff8b;
+}
+
+
+
+
+
+
+
+
+.infoimg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+  gap: 1.0%; /* Espaço entre as imagens */
+}
+
+.infoimg img {
+  width: 100%; /* Faz com que as imagens ocupem toda a largura da coluna */
+  height: auto; /* Mantém a proporção das imagens */
+  margin-bottom: 15px;
+}
+
+.infoimg2 p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+	font-family: Raleway;
+	margin-left: 1.66%;
+	font-size: 30px;
+	font-weight: 800;
+	text-transform: uppercase;
+	width: 97%;
+	padding-bottom: 10px;
+}
+
+
+
+
+.fundooimg {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  flex-direction: column;
+}
+
+.fundooimg img {
+  margin-left: -15px;
+  margin-right: -15px;
 }
