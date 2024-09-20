@@ -80,6 +80,7 @@
   padding: 1.5rem;
   text-align: center;
   /* box-shadow: 0 4px 6px rgba(174, 190, 205, .3); */
+  transition: transform 0.3s; /* Suaviza a transição */
 }
 
 .contactz__descriptionz {
@@ -107,7 +108,8 @@
 }
 
 .contactz__boxz:hover {
-  box-shadow: 0 6px 8px rgba(174, 190, 205, .4);
+  transform: scale(1.1); /* Aumenta a imagem em 100% */
+  box-shadow: 0 6px 8px #00cbfe5f;
 }
 
 .contactz__inputsz {
