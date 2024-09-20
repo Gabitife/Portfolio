@@ -1,6 +1,220 @@
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+
+/*===== CLASS CSS =====*/
+.sectionz {
+  padding: 4rem 0 2rem;
+}
+
+.sectionz-titlez, .sectionz-subtitlez {
+  display: flex;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+}
+
+.sectionz-titlez {
+  display: flex;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.sectionz-subtitlez {
+  display: block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+/*===== LAYOUT =====*/
+.bd-containerz {
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.bd-gridz {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contactclass {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+/*===== BUTTON =====*/
+.buttonz {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--first-color-lighten);
+  padding: .75rem 1rem;
+  border-radius: .25rem;
+  transition: .3s;
+}
+
+.buttonz:hover {
+  background-color: var(--first-color-dark);
+}
+
+/*===== CONTACT ME =====*/
+.contactz__containerz {
+  row-gap: 2.5rem;
+}
+
+.contactz__contentz {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contactz__boxz {
+  margin-bottom: 15px;
+  background-color: #262626;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  text-align: center;
+  /* box-shadow: 0 4px 6px rgba(174, 190, 205, .3); */
+}
+
+.contactz__descriptionz {
+  color: #00cbfe;
+}
+
+.contactz__icon, .contactz__titlez {
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.contactz__icon {
+  font-size: 2rem;
+}
+
+.contactz__titlez {
+  font-size: 20px;
+  margin: var(--mb-1) 0;
+}
+
+.contactz__socialz {
+  color: var(--first-color-light);
+  font-size: 1.25rem;
+  margin: 0 var(--mb-1);
+}
+
+.contactz__boxz:hover {
+  box-shadow: 0 6px 8px rgba(174, 190, 205, .4);
+}
+
+.contactz__inputsz {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+
+.contactz__inputz, .contactz__buttonz {
+  outline: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.contactz__inputz {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--first-color-light);
+  color: var(--first-color);
+  border-radius: .5rem;
+  margin-bottom: var(--mb-1);
+}
+
+.contactz::placeholder {
+  color: var(--first-color-light);
+  font-family: var(--body-font);
+  font-weight: var(--font-semi-bold);
+}
+
+.contactz__buttonz {
+  cursor: pointer;
+  border: none;
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 576px) {
+  .contactz__formz {
+    width: 450px;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-containerz {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .preset img {
   display: block;
   justify-content: center;
   width: 100%;
   padding-bottom: 4%;
 }
+
+
+
+
+
+.infoimg {
+  margin-left: 45px;
+  margin-right: 25px;
+  margin-top: -65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+  gap: 1.0%; /* Espaço entre as imagens */
+}
+
+.infoimg img {
+  width: 100%; /* Faz com que as imagens ocupem toda a largura da coluna */
+  height: auto; /* Mantém a proporção das imagens */
+  margin-bottom: 15px;
+}
+
+.infoimg2 p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+	font-family: Raleway;
+	margin-left: 1.66%;
+	font-size: 30px;
+	font-weight: 800;
+	text-transform: uppercase;
+	width: 97%;
+	padding-bottom: 10px;
+}
+
+.lateralpx {
+  margin-left: 45px;
+  margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+
