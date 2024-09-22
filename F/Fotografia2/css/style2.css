@@ -179,11 +179,15 @@
 
 
 
+.margintop {
+  padding-top: 25px;
+}
+
 
 .infoimg {
   margin-left: 45px;
   margin-right: 25px;
-  margin-top: -65px;
+  margin-top: 5px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
   gap: 1.0%; /* Espaço entre as imagens */
