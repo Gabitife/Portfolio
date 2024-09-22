@@ -75,7 +75,7 @@
 
 .contactz__boxz {
   margin-bottom: 15px;
-  background-color: #262626;
+  background-color: #2626267f;
   border-radius: .5rem;
   padding: 1.5rem;
   text-align: center;
@@ -108,8 +108,8 @@
 }
 
 .contactz__boxz:hover {
-  transform: scale(1.1); /* Aumenta a imagem em 100% */
-  box-shadow: 0 6px 8px #00cbfe5f;
+  transform: scale(1); /* Aumenta a imagem em 100% */
+  box-shadow: 0 2px 4px #00cbfe5f;
 }
 
 .contactz__inputsz {
