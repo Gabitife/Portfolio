@@ -1,0 +1,264 @@
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #f0f0f000;
+    margin: 10px;
+    padding: 20px;
+    min-height: 100%;
+	background: radial-gradient(circle at bottom, #7da7d800 0%, #ffffff00 100%);
+
+}
+
+.image-container {
+    top: 100px;
+    position: relative;
+    width: 100%;
+    max-width: 415px;
+    margin: -90px; 
+}
+
+
+.image-message {
+    position: absolute;
+    top: 55px; /* Distância do topo da imagem */
+    left: 35%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #000000; /* Cor do texto */
+    background-color: #000000; /* Fundo semi-transparente */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Transição suave ao aumentar */
+    font-family: 'Dancing Script', cursive; /* Altera a fonte para cursiva */
+}
+
+
+.image-container:hover .image-message {
+    display: block; /* Garante que a mensagem fique visível */
+    transform: translateX(-50%) scale(1.15); /* Aumenta 15% ao passar o mouse */
+    /* z-index: 1; */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease; /* Transição suave ao aumentar */
+    z-index: 1; /* Garante que a mensagem fique acima da imagem */
+}
+
+.image-container:hover img {
+    transform: scale(1.15); /* Aumenta 15% ao passar o mouse */
+}
+
+
+.close-button {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#overlay-message {
+    position: relative;
+    width: 47%;
+    height: 37%;
+    width: 470px;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.144);
+    background-size: 1000px;
+    border-radius: 10px;
+}
+
+.overlay {
+    display: none; /* Oculta a sobreposição por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    
+}
+.overlay.active {
+    display: flex; /* Exibe a sobreposição quando ativa */
+}
+.overlay-content {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    
+}
+
+.overlay-content {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 100px;
+    width: 50%;
+    max-width: 50%;
+    width: 500px;
+    height: 600PX;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    padding: 60px;
+}
+
+label {
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva para o rótulo */
+    font-size: 40px; /* Tamanho da fonte */
+    margin-right: 10px; /* Espaço à direita do rótulo */
+}
+
+#day-select {
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva para o select */
+    font-size: 24px; /* Tamanho da fonte */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #000000; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+#day-select:hover {
+    border-color: #000000; /* Cor da borda ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.message-1 { background-image: url('assets/img/LittleMoment99601.png'); }
+.message-2 { background-image: url('assets/img/LittleMoment99702.png'); }
+.message-3 { background-image: url('assets/img/LittleMoment99803.png'); }
+.message-4 { background-image: url('assets/img/LittleMoment99904.png'); }
+.message-5 { background-image: url('assets/img/LittleMoment100005.png'); }
+.message-6 { background-image: url('assets/img/LittleMoment100106.png'); }
+.message-7 { background-image: url('assets/img/LittleMoment100207.png'); }
+.message-8 { background-image: url('assets/img/LittleMoment100308.png'); }
+.message-9 { background-image: url('assets/img/LittleMoment100409.png'); }
+.message-10 { background-image: url('assets/img/LittleMoment100510.png'); }
+.message-11 { background-image: url('assets/img/LittleMoment100611.png'); }
+.message-12 { background-image: url('assets/img/LittleMoment100712.png'); }
+.message-13 { background-image: url('assets/img/LittleMoment100813.png'); }
+.message-14 { background-image: url('assets/img/LittleMoment100914.png'); }
+.message-15 { background-image: url('assets/img/LittleMoment101015.png'); }
+.message-16 { background-image: url('assets/img/LittleMoment101116.png'); }
+.message-17 { background-image: url('assets/img/LittleMoment101217.png'); }
+.message-18 { background-image: url('assets/img/LittleMoment101318.png'); }
+.message-19 { background-image: url('assets/img/LittleMoment101419.png'); }
+.message-20 { background-image: url('assets/img/LittleMoment101520.png'); }
+.message-21 { background-image: url('assets/img/LittleMoment10121.png'); }
+.message-22 { background-image: url('assets/img/LittleMoment10122.png'); }
+.message-23 { background-image: url('assets/img/LittleMoment10123.png'); }
+.message-24 { background-image: url('assets/img/LittleMoment10124.png'); }
+.message-25 { background-image: url('assets/img/LittleMoment10125.png'); }
+.message-26 { background-image: url('assets/img/LittleMoment10126.png'); }
+.message-27 { background-image: url('assets/img/LittleMoment10127.png'); }
+.message-28 { background-image: url('assets/img/LittleMoment10128.png'); }
+.message-29 { background-image: url('assets/img/LittleMoment10129.png'); }
+.message-30 { background-image: url('assets/img/LittleMoment10130.png'); }
+.message-31 { background-image: url('assets/img/LittleMoment10131.png'); }
+.message-32 { background-image: url('assets/img/LittleMoment10132.png'); }
+.message-33 { background-image: url('assets/img/LittleMoment10133.png'); }
+.message-34 { background-image: url('assets/img/LittleMoment10134.png'); }
+.message-35 { background-image: url('assets/img/LittleMoment10135.png'); }
+.message-36 { background-image: url('assets/img/LittleMoment10136.png'); }
+.message-37 { background-image: url('assets/img/LittleMoment10137.png'); }
+.message-38 { background-image: url('assets/img/LittleMoment10138.png'); }
+.message-39 { background-image: url('assets/img/LittleMoment10139.png'); }
+.message-40 { background-image: url('assets/img/LittleMoment10140.png'); }
+.message-41 { background-image: url('assets/img/LittleMoment10141.png'); }
+.message-42 { background-image: url('assets/img/LittleMoment10142.png'); }
+.message-43 { background-image: url('assets/img/LittleMoment10143.png'); }
+.message-44 { background-image: url('assets/img/LittleMoment10144.png'); }
+.message-45 { background-image: url('assets/img/LittleMoment10145.png'); }
+.message-46 { background-image: url('assets/img/LittleMoment10146.png'); }
+.message-47 { background-image: url('assets/img/LittleMoment10147.png'); }
+.message-48 { background-image: url('assets/img/LittleMoment10148.png'); }
+.message-49 { background-image: url('assets/img/LittleMoment10149.png'); }
+.message-50 { background-image: url('assets/img/LittleMoment10150.png'); }
+.message-51 { background-image: url('assets/img/LittleMoment10151.png'); }
+.message-52 { background-image: url('assets/img/LittleMoment10152.png'); }
+.message-53 { background-image: url('assets/img/LittleMoment10153.png'); }
+.message-54 { background-image: url('assets/img/LittleMoment10154.png'); }
+.message-55 { background-image: url('assets/img/LittleMoment10155.png'); }
+.message-56 { background-image: url('assets/img/LittleMoment10156.png'); }
+.message-57 { background-image: url('assets/img/LittleMoment10157.png'); }
+.message-58 { background-image: url('assets/img/LittleMoment10158.png'); }
+.message-59 { background-image: url('assets/img/LittleMoment10159.png'); }
+.message-60 { background-image: url('assets/img/LittleMoment10160.png'); }
+.message-61 { background-image: url('assets/img/LittleMoment10161.png'); }
+.message-62 { background-image: url('assets/img/LittleMoment10162.png'); }
+.message-63 { background-image: url('assets/img/LittleMoment10163.png'); }
+.message-64 { background-image: url('assets/img/LittleMoment10164.png'); }
+.message-65 { background-image: url('assets/img/LittleMoment10165.png'); }
+.message-66 { background-image: url('assets/img/LittleMoment10166.png'); }
+.message-67 { background-image: url('assets/img/LittleMoment10167.png'); }
+.message-68 { background-image: url('assets/img/LittleMoment10168.png'); }
+.message-69 { background-image: url('assets/img/LittleMoment10169.png'); }
+.message-70 { background-image: url('assets/img/LittleMoment10170.png'); }
+.message-71 { background-image: url('assets/img/LittleMoment10171.png'); }
+.message-72 { background-image: url('assets/img/LittleMoment10172.png'); }
+.message-73 { background-image: url('assets/img/LittleMoment10173.png'); }
+.message-74 { background-image: url('assets/img/LittleMoment10174.png'); }
+.message-75 { background-image: url('assets/img/LittleMoment10175.png'); }
+.message-76 { background-image: url('assets/img/LittleMoment10176.png'); }
+.message-77 { background-image: url('assets/img/LittleMoment10177.png'); }
+.message-78 { background-image: url('assets/img/LittleMoment10178.png'); }
+.message-79 { background-image: url('assets/img/LittleMoment10179.png'); }
+.message-80 { background-image: url('assets/img/LittleMoment10180.png'); }
+.message-81 { background-image: url('assets/img/LittleMoment10181.png'); }
+.message-82 { background-image: url('assets/img/LittleMoment10182.png'); }
+.message-83 { background-image: url('assets/img/LittleMoment10183.png'); }
+.message-84 { background-image: url('assets/img/LittleMoment10184.png'); }
+.message-85 { background-image: url('assets/img/LittleMoment10185.png'); }
+.message-86 { background-image: url('assets/img/LittleMoment10186.png'); }
+.message-87 { background-image: url('assets/img/LittleMoment10187.png'); }
+.message-88 { background-image: url('assets/img/LittleMoment10188.png'); }
+.message-89 { background-image: url('assets/img/LittleMoment10189.png'); }
+.message-90 { background-image: url('assets/img/LittleMoment10190.png'); }
+.message-91 { background-image: url('assets/img/LittleMoment10191.png'); }
+.message-92 { background-image: url('assets/img/LittleMoment10192.png'); }
+.message-93 { background-image: url('assets/img/LittleMoment10193.png'); }
+.message-94 { background-image: url('assets/img/LittleMoment10194.png'); }
+.message-95 { background-image: url('assets/img/LittleMoment10195.png'); }
+.message-96 { background-image: url('assets/img/LittleMoment10196.png'); }
+.message-97 { background-image: url('assets/img/LittleMoment10197.png'); }
+.message-98 { background-image: url('assets/img/LittleMoment10198.png'); }
+.message-99 { background-image: url('assets/img/LittleMoment10199.png'); }
+.message-100 { background-image: url('assets/img/LittleMoment101100.png'); }
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope Animado</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Seu CSS compilado -->
+    <link rel="stylesheet" href="overlay.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="heart x1"></div>
+        <div class="heart x2"></div>
+        <div class="heart x3"></div>
+        <div class="heart x4"></div>
+        <div class="heart x5"> </div>
+        <div class="altheart x6"></div>
+
+    <div class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1"></div>
+                <div class="words line2"></div>
+                <div class="words line3"></div>
+                <div class="words line4"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <h1>Seu Texto Aqui</h1>
+            <p>Bom por onde começar... deixarei meus pensamentos e sentimentos fluirem sobre esta carta.</p>
+            <p>Mais texto aqui para demonstrar a rolagem. Continue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.</p>
+            <p>Mais conteúdo... <br> ...e mais conteúdo...ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.ontinue adicionando conteúdo para testar.</p>
+            <p>Mais conteúdo... <br> ...e mais conteúdo...</p>
+            <p>Mais conteúdo... <br> ...e mais conteúdo...</p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(document).ready(function() {
+            var envelope = $('#envelope');
+            var overlay = $('#overlay');
+            var btn_open = $("#open");
+            var btn_reset = $("#reset");
+            
+            // Alterna entre abrir e fechar ao clicar no envelope
+            envelope.click(function() {
+                if (envelope.hasClass("open")) {
+                    close();
+                } else {
+                    open();
+                }
+            });
+            btn_open.click(function() {
+                open();
+            });
+            btn_reset.click(function() {
+                close();
+            });
+
+            // Fecha a sobreposição ao clicar nela
+            overlay.click(function() {
+                close();
+            });
+
+            function open() {
+                envelope.addClass("open").removeClass("close");
+                overlay.fadeIn(5000); // Mostrar a sobreposição com uma animação de 5 segundos
+            }
+            function close() {
+                envelope.addClass("close").removeClass("open");
+                overlay.fadeOut(3000); // Esconder a sobreposição com uma animação de 3 segundos
+            }
+        });
+    </script>
+</body>
+</html>

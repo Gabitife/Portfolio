@@ -1,0 +1,752 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+  --color-text: #292828;
+  --color-bg: #ddd;
+  --color-link: #000;
+  --color-link-hover: #000;
+  --page-padding: 1rem;
+  --angle: -15deg;
+  /* --trans-content: -60vh; */
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%; /* Usa a largura total da viewport */
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+
+.noscroll {
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  background: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid red;
+  background: transparent;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
+    radial-gradient(circle, #315f316e 0%, transparent 100%);
+  background-size: 250px, 100%;
+  pointer-events: none;
+}
+
+.intro--open {
+  height: 80vh;
+}
+
+.grid {
+  gap: 1rem;
+  flex: none;
+  position: relative;
+  width: 200vw;
+  height: 200vh;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 100%;
+  transform: rotate(var(--angle));
+  transform-origin: center center;
+}
+
+.row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+  will-change: transform, filter;
+}
+
+.row__item {
+  position: relative;
+}
+
+.row__item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.row__item-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.row__item-img--large {
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  margin: -50vh 0 0 -50vw;
+  background-position: 50% 70%;
+  will-change: transform, filter;
+}
+
+.enter {
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  text-transform: uppercase;
+  padding: 1.75rem 5rem;
+  font-weight: 550;
+  z-index: 100;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
+    radial-gradient(circle, transparent 0%, transparent 100%);
+  background-size: 250px, 4000px;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.enter::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 3rem;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.enter:focus::before,
+.enter:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.fullview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fullview .row__item-inner {
+  border-radius: 0px;
+}
+
+.content {
+  padding: var(--page-padding);
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
+    radial-gradient(at top, #68818d5d 0%, #e4f2ff 100%);
+  background-size: 250px, 100%;
+}
+
+.content > * {
+  position: relative;
+}
+
+/* .content__nav {
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+} */
+
+
+
+
+.content__header h2 {
+  font-size: 7rem; /* Tamanho base */
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  margin: 5rem 0 5vh;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Media queries para responsividade */
+/* @media (max-width: 1920px) {
+  .content__header h2 {
+    font-size: 8rem;
+    margin: 4rem 0 4vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content__header h2 {
+    font-size: 6rem;
+    margin: 4rem 0 4vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .content__header h2 {
+    font-size: 5rem;
+    margin: 3rem 0 3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .content__header h2 {
+    font-size: 5rem;
+    margin: 2rem 0 2vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .content__header h2 {
+    font-size: 4rem;
+    margin: 1rem 0 1vh;
+  }
+} */
+
+
+
+
+.content__text {
+  margin: 20px;
+  text-wrap: balance;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* display: flex; */
+}
+
+.content__text p {
+  font-size: 2rem;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.content__text p.highlight {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  min-height: 60px;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-links-left {
+  justify-content: center;
+}
+
+.nav-links-right {
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #000000;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #00000060;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+.hamburger {
+  list-style-type: none; /* Remove a numeração */
+  margin-top: 15px;
+  margin-left: 20px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+.line {
+  display: flex;
+  margin-left: 20px;
+  height: 4px;
+  width: 50px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px 0;
+  z-index: 1000;
+  color: #000;
+  z-index: 200;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
+  radial-gradient(circle, #a1b3c2f8 40%, transparent 100%);
+  background-size: 250px, 100%; 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  transition: transform 100ms linear;
+}
+
+.overlay-content {
+  list-style-type: decimal; /* Remove a numeração */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  line-height: 100px;
+  transition: transform 300ms linear;
+}
+
+@media (max-width: 1000px) {
+  .nav-links {
+      display: none;
+  }
+  .navbar {
+    height: 100px;
+}
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== VIDEO ===============*/
+.video__container {
+  padding-bottom: 1rem;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .video__container {
+    padding: 0;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .video__container {
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .video__container {
+    grid-template-columns: .7fr;
+  }
+}
+
+
+
+  .video__description {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+  }
+  .video__description2 {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+  }
+
+
+  .video__description {
+    text-align: center;
+    margin-bottom: var(--mb-2-0);
+    margin-bottom: 2rem;
+  }
+  
+  .video__description2 {
+    text-align: center;
+    margin-bottom: var(--mb-2-0);
+  }
+
+  .video__text {
+    text-align: center;
+    margin-bottom: var(--mb-2-0);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+
+
+
+
+
+
+
+  /* @media screen and (max-width: 1000px) {
+    .body, .cartasframe {
+       display: ;
+       width: 100%;
+       height: 100%;
+       flex-direction: column;
+       --page-padding: 2rem 3rem;
+     }
+   
+     .content__text p.highlight {
+       font-size: clamp(2rem, 7vh, 4rem);
+     }
+   } */
+   
+   .main {
+    overflow-x: hidden;
+  }
+/*=============== HOME ===============*/
+.home__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 27vh;
+    object-fit: cover;
+    object-position: 50%;
+  }
+  
+  .home__img2 {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative; /* Define o contexto para o z-index */
+    z-index: 10; /* Valor alto para ficar na frente de outras camadas */
+  }
+
+  
+  .cartasframe iframe {
+    /* min-height: 800px; */
+    border: none; /* Remove a borda do iframe */
+    width: 100%;
+    height: 800px;
+    position: relative; /* Define o contexto para o z-index */
+    z-index: 10; /* Valor alto para ficar na frente de outras camadas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #scrollBtn {
+    position: fixed;
+    font-size: 20px;
+    bottom: 70px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.681);
+    border-radius: 50%; /* Botão redondo */
+    cursor: pointer;
+    z-index: 1000;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#scrollBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+
+  --bg-image-1: url("assets/img/LittleMoment100005.png");
+  --bg-image-2: url("assets/img/LittleMoment100106.png");
+  --bg-image-3: url("assets/img/LittleMoment100207.png");
+}
+
+
+
+.wrapper {
+  height: 4000px;
+  padding-bottom: 100px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  touch-action: pan-y; /* Permite rolar apenas na direção vertical */
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 100ms linear;
+  background-color: #222;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.c1 {
+  background-image: var(--bg-image-1);
+}
+
+.c2 {
+  background-image: var(--bg-image-2);
+}
+
+.c3 {
+  background-image: var(--bg-image-3);
+}
+
+.wrapper {
+  background-size: cover;
+  background-position: top;  
+  background-repeat: no-repeat;
+  
+  &:after{
+    content: "";
+    background: linear-gradient(to right top, #040404ff, #21212111);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(12px);
+  }
+
+  &:has(#c1:checked) {
+    background-image: var(--bg-image-1);
+  }
+  &:has(#c2:checked) {
+    background-image: var(--bg-image-2);
+  }
+  &:has(#c3:checked) {
+    background-image: var(--bg-image-3);
+  }
+}
+  
+.home__img2 {
+ top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

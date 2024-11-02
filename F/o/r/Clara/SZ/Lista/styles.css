@@ -21,10 +21,10 @@ body {
 
 .image-message {
     position: absolute;
-    top: 55px; /* Distância do topo da imagem */
+    top: 5%; /* Distância do topo da imagem */
     left: 35%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 20px;
     color: #000000; /* Cor do texto */
     background-color: #000000; /* Fundo semi-transparente */
     padding: 5px 10px; /* Espaçamento interno */
@@ -41,11 +41,16 @@ body {
 }
 
 .image-container img {
+    display: flex;
+    margin-bottom: 150px;
     width: 100%;
     height: auto;
     transition: transform 0.4s ease; /* Transição suave ao aumentar */
     z-index: 1; /* Garante que a mensagem fique acima da imagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra ao redor da imagem */
+    border-radius: 15px;
 }
+
 
 .image-container:hover img {
     transform: scale(1.15); /* Aumenta 15% ao passar o mouse */
