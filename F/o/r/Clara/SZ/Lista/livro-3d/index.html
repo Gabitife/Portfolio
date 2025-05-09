@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Livro Virtual 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Botão de tema -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <div class="book-container">
+    <div class="book" id="book">
+
+      <!-- Capa Frontal -->
+      <!-- <div class="page page--left page--cover">
+        <img src="imgassets/gm.jpg" alt="Capa">
+      </div> -->
+
+      <!-- Página 3 (ímpar - direita) -->
+      <div class="page page--left">
+        <h1>Página 2</h1>
+        <p>Conteúdo da página 2.</p>
+      </div>
+      <!-- Página 1 (ímpar - direita) -->
+      <div class="page page--right">
+        <h1 style="opacity: 1;">Página 1</h1>
+        <p>Conteúdo da página 1.</p>
+      </div>
+
+      <!-- Página 3 (ímpar - direita) -->
+      <div class="page page--left">
+        <h1>Página 2</h1>
+        <p>Conteúdo da página 2.</p>
+      </div>
+
+      <!-- Página 3 (ímpar - direita) -->
+      <div class="page page--right">
+        <h1>Página 3</h1>
+        <p>Conteúdo da página 3.</p>
+      </div>
+
+      <!-- Página 4 (par - esquerda) -->
+      <div class="page page--left">
+        <h1>Página 4</h1>
+        <p>Conteúdo da página 4.</p>
+      </div>
+
+      <!-- Página 5 (ímpar - direita) -->
+      <div class="page page--right">
+        <h1>Página 5</h1>
+        <p>Conteúdo da página 5.</p>
+      </div>
+
+      <!-- Página 6 (par - esquerda) -->
+      <div class="page page--left">
+        <h1>Página 6</h1>
+        <p>Conteúdo da página 6.</p>
+      </div>
+
+      <!-- Página 7 (ímpar - direita) -->
+      <div class="page page--right">
+        <h1>Página 7</h1>
+        <p>Conteúdo da página 7.</p>
+      </div>
+
+      <!-- Página 8 (par - esquerda) -->
+      <div class="page page--left">
+        <h1>Página 8</h1>
+        <p>Conteúdo da página 8.</p>
+      </div>
+
+      <!-- Página 9 (ímpar - direita) -->
+      <div class="page page--right">
+        <h1>Página 9</h1>
+        <p>Conteúdo da página 9.</p>
+      </div>
+
+      <!-- Página 10 (par - esquerda) -->
+      <div class="page page--left">
+        <h1>Página 10</h1>
+        <p>Conteúdo da página 10.</p>
+      </div>
+
+      <!-- Capa Traseira -->
+      <div class="page page--right page--back-cover">
+        <h2>Fim do Livro</h2>
+      </div>
+
+    </div>
+
+    <!-- Overlay para navegação por cliques laterais -->
+    <div class="overlay overlay--left" onclick="turnPage('prev')"></div>
+    <div class="overlay overlay--right" onclick="turnPage('next')"></div>
+ </div>
+    <!-- Botões de navegação -->
+    <div class="nav-buttons">
+      <button class="nav-button prev" onclick="turnPage('prev')">&#8592; Anterior</button>
+      <!-- <span class="page-counter" id="pageCounter">Páginas 1-2 / 10</span> -->
+      <button class="nav-button next" onclick="turnPage('next')">Próximo &#8594;</button>
+    </div>
+  </div>
+
+  <div>
+
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
