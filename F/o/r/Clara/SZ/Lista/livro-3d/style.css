@@ -20,8 +20,182 @@ html {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Background Dinâmico com Imagens Aleatórias === */
+#background-images {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  opacity: 70%;
+  max-height: 500px;
+  transition: opacity 2s ease, transform 3s ease !important;
+  will-change: transform, opacity !important;
+  animation: fadeInOut 20s infinite ease-in-out !important;
+  filter: blur(1px);
+}
+
+.background-image img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px) rotateZ(0deg)!important;
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotateZ(0deg)!important;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotateZ(1deg)!important;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px) rotateZ(-1deg)!important;
+  }
+}
+
+
+
+
+
+
+
+/* === Player de Música - Sobreposição Completa === */
+.music-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9998;
+  background: none;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .music-toggle {
+  color: white;
+  border-color: rgb(48, 48, 48);
+}
+
+.music-player-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+.music-player-overlay.active {
+  display: flex;
+}
+
+.music-player-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  color: #333;
+}
+
+.dark-mode .music-player-content {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0;
+}
+
+.music-title {
+  margin-bottom: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.music-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.music-controls button {
+  flex: 1;
+  background: #ffffff17;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.music-controls button:hover {
+  background: #555;
+}
+
+.music-player-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.dark-mode .music-player-close {
+  color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
 body {
-  background-color: #f5f5f5;
+  background-color: rgba(229, 229, 229, 0.295);
   font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
@@ -39,7 +213,7 @@ body {
   background: none;
   border: 2px solid #333;
   color: #333;
-  padding: 5px 5px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
@@ -47,16 +221,16 @@ body {
 }
 
 .dark-mode .theme-toggle {
-  background: rgba(255, 255, 255, 0.118);
+  background: #ffffff00;
   color: black;
-  border-color: rgb(0, 0, 0);
+  border-color: rgb(48, 48, 48);
 }
 
 .book-container {
   margin: 0 20px;
   width: calc(100% - 40px);
-  max-width: 900px;
-  height: 500px;
+  max-width: 1400px;
+  height: 650px;
   perspective: 1200px;
   position: relative;
   display: flex;
@@ -70,25 +244,31 @@ body {
   height: 100%;
   display: flex;
   transform-style: preserve-3d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .page {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
   backface-visibility: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  padding: 0px;
+  background: rgba(240, 240, 240, 0.677);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  padding: 0;
   text-align: center;
-  transition: transform 1s ease-in-out;
+  /* transition: transform 1s ease-in-out, opacity 1s ease-in-out; */
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.page--visible {
+  opacity: 1 !important;
+  z-index: 2;
 }
 
 .page--left {
@@ -102,23 +282,35 @@ body {
 }
 
 .page--cover img {
-  
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+.page h1,
 .page p {
+  color: #000;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
   margin-top: 10%;
+  text-align: center;
+  max-width: 90%;
+  opacity: 1;
+}
+
+.page p {
+  font-size: 1.1rem;
+  color: #000000;
   opacity: 1 !important;
-  transform: translateY(0) !important;
 }
 
 .page h1 {
-  margin-top: -80%;
+  font-size: 1.8rem;
+  color: #000000;
   opacity: 1 !important;
-  transform: translateY(0) !important;
 }
+
 
 .page--visible h1,
 .page--visible p {
@@ -126,12 +318,54 @@ body {
   transform: translateY(0);
 }
 
+
+
 .page--back-cover {
-  background: #ddd;
+  /* background: #ddd; */
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+}
+
+.dark-mode .page,
+.dark-mode .page--cover img,
+.dark-mode .page--back-cover {
+  color: #f0f0f0;
+  background-color: #1e1e1ed9 !important;
+  text-decoration-color: #ffffff00
+;
+}
+
+.dark-mode .page h1 {
+  color: #ffffff;
+;
+}
+
+.dark-mode .page p {
+  color: #ffffff;
+;
+}
+
+.dark-mode .nav-button {
+  background-color: #1e1e1ed9;
+  color: white;
+}
+
+.dark-mode .nav-button:hover {
+  background-color: #1e1e1e93;
+}
+
+.dark-mode #pageCounter {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .overlay {
@@ -168,26 +402,6 @@ body {
   z-index: 20;
 }
 
-.dark-mode #pageCounter {
-  color: white !important;
-}
-
-.dark-mode .nav-button {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.dark-mode .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.dark-mode #pageCounter {
-  color: white !important;
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
 .nav-button {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
@@ -208,41 +422,62 @@ body {
   color: #333;
 }
 
-.img {
-  padding: -20px;
+/* ========== Modo Responsivo - Tela menor que 700px ========== */
+@media (max-width: 1000px){
+
+  .book-container {
+    padding: 20px;
+    max-height: 800px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .book {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .page {
+    position: absolute !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    transform-origin: center !important;
+    z-index: 1;
+    opacity: 0;
+    /* transition: transform 1s ease-in-out, opacity 1s ease-in-out; */
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .nav-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-button {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .page-counter {
+    flex: 2;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
-
-/* Dark Mode */
-.dark-mode {
-  background-color: #121212;
-}
-
-.dark-mode .page,
-.dark-mode .page--cover img,
-.dark-mode .page--back-cover {
-  background-color: #1e1e1e !important;
-  color: #f0f0f0;
-}
-
-.dark-mode .nav-button {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.dark-mode .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-element.style {
-  opacity: 1;
-  transform: translateY(20px);
-}
-
-
-
-
-
-
 
 
 

@@ -3,110 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Livro Virtual 3D</title>
+  <title>Eternas Recordacoes</title>
+ 
+  <!-- Fonte IBM Plex Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono :wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+      <!-- Background com imagens aleatórias -->
+      <div id="background-images"></div>
+
   <!-- Botão de tema -->
   <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- Botão do Player -->
+<button class="music-toggle" onclick="toggleMusicPlayer()">☰</button>
+
+<!-- Overlay do Player -->
+<div class="music-player-overlay" id="musicPlayerOverlay">
+  <div class="music-player-content">
+    <span class="music-player-close" onclick="toggleMusicPlayer()">&times;</span>
+    <h2 class="music-title" id="musicTitle">Nenhuma música selecionada</h2>
+
+    <!-- Controles de Áudio -->
+    <audio id="musicAudio" controls>
+      Seu navegador não suporta a tag audio.
+    </audio> 
+
+    <!-- Botões de navegação -->
+    <div class="music-controls">
+      <button onclick="prevMusic()">⏮️</button>
+      <button onclick="togglePlay()">▶️</button>
+      <button onclick="nextMusic()">⏭️</button>
+    </div>
+  </div>
+</div>
 
   <div class="book-container">
     <div class="book" id="book">
 
-      <!-- Capa Frontal -->
-      <!-- <div class="page page--left page--cover">
-        <img src="imgassets/gm.jpg" alt="Capa">
-      </div> -->
-
-      <!-- Página 3 (ímpar - direita) -->
+      <!-- Grupo 0 -->
       <div class="page page--left">
-        <h1>Página 2</h1>
-        <p>Conteúdo da página 2.</p>
+        <h1 data-original="Página 1">Página 1</h1>
+        <p data-original="Este é o conteúdo da página 1.">Conteúdo da página 1.</p>
       </div>
-      <!-- Página 1 (ímpar - direita) -->
+
       <div class="page page--right">
-        <h1 style="opacity: 1;">Página 1</h1>
-        <p>Conteúdo da página 1.</p>
+        <h1 data-original="Página 2">Página 2</h1>
+        <p data-original="Este é o conteúdo da página 2.">Conteúdo da página 2.</p>
       </div>
 
-      <!-- Página 3 (ímpar - direita) -->
+      <!-- Grupo 1 -->
       <div class="page page--left">
-        <h1>Página 2</h1>
-        <p>Conteúdo da página 2.</p>
+        <h1 data-original="Página 3">Página 3</h1>
+        <p data-original="Este é o conteúdo da página 3.">Conteúdo da página 3.</p>
       </div>
 
-      <!-- Página 3 (ímpar - direita) -->
       <div class="page page--right">
-        <h1>Página 3</h1>
-        <p>Conteúdo da página 3.</p>
+        <h1 data-original="Página 4">Página 4</h1>
+        <p data-original="Este é o conteúdo da página 4.">Conteúdo da página 4.</p>
       </div>
 
-      <!-- Página 4 (par - esquerda) -->
+      <!-- Grupo 2 -->
       <div class="page page--left">
-        <h1>Página 4</h1>
-        <p>Conteúdo da página 4.</p>
+        <h1 data-original="Página 5">Página 5</h1>
+        <p data-original="Este é o conteúdo da página 5.">Conteúdo da página 5.</p>
       </div>
 
-      <!-- Página 5 (ímpar - direita) -->
       <div class="page page--right">
-        <h1>Página 5</h1>
-        <p>Conteúdo da página 5.</p>
+        <h1 data-original="Página 6">Página 6</h1>
+        <p data-original="Este é o conteúdo da página 6.">Conteúdo da página 6.</p>
       </div>
 
-      <!-- Página 6 (par - esquerda) -->
+      <!-- Grupo 3 -->
       <div class="page page--left">
-        <h1>Página 6</h1>
-        <p>Conteúdo da página 6.</p>
+        <h1 data-original="Página 7">Página 7</h1>
+        <p data-original="Este é o conteúdo da página 7.">Conteúdo da página 7.</p>
       </div>
 
-      <!-- Página 7 (ímpar - direita) -->
       <div class="page page--right">
-        <h1>Página 7</h1>
-        <p>Conteúdo da página 7.</p>
+        <h1 data-original="Página 8">Página 8</h1>
+        <p data-original="Este é o conteúdo da página 8.">Conteúdo da página 8.</p>
       </div>
 
-      <!-- Página 8 (par - esquerda) -->
+            <!-- Grupo 4 -->
       <div class="page page--left">
-        <h1>Página 8</h1>
-        <p>Conteúdo da página 8.</p>
+        <h1 data-original="Página 9">Página 9</h1>
+        <p data-original="Este é o conteúdo da página 7.">Conteúdo da página 9.</p>
       </div>
 
-      <!-- Página 9 (ímpar - direita) -->
       <div class="page page--right">
-        <h1>Página 9</h1>
-        <p>Conteúdo da página 9.</p>
+        <h1 data-original="Página 10">Página 10</h1>
+        <p data-original="Este é o conteúdo da página 8.">Conteúdo da página 10.</p>
       </div>
 
-      <!-- Página 10 (par - esquerda) -->
+      <!-- Grupo 5 -->
       <div class="page page--left">
-        <h1>Página 10</h1>
-        <p>Conteúdo da página 10.</p>
+        <h1 data-original="Página 11">Fim</h1>
+        <p data-original="Este é o conteúdo da página 7.">Fim</p>
       </div>
 
-      <!-- Capa Traseira -->
-      <div class="page page--right page--back-cover">
-        <h2>Fim do Livro</h2>
+      <div class="page page--right">
+        <h1 data-original="Página 12">Fim</h1>
+        <p data-original="Este é o conteúdo da página 8.">Fim</p>
       </div>
 
     </div>
 
-    <!-- Overlay para navegação por cliques laterais -->
+    <!-- Overlay para navegação lateral -->
     <div class="overlay overlay--left" onclick="turnPage('prev')"></div>
     <div class="overlay overlay--right" onclick="turnPage('next')"></div>
- </div>
-    <!-- Botões de navegação -->
+  </div>
+
+      <!-- Botões de navegação -->
     <div class="nav-buttons">
       <button class="nav-button prev" onclick="turnPage('prev')">&#8592; Anterior</button>
-      <!-- <span class="page-counter" id="pageCounter">Páginas 1-2 / 10</span> -->
+      <span class="page-counter" id="pageCounter">Páginas 1 - 2 / 10</span>
       <button class="nav-button next" onclick="turnPage('next')">Próximo &#8594;</button>
     </div>
-  </div>
 
-  <div>
-
-  </div>
-  
   <script src="script.js"></script>
 </body>
 </html>
