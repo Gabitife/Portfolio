@@ -8,7 +8,9 @@ const totalPages = pages.length;
 const musicList = [
   { title: "No Escuro", src: "music/NoEscuro.mp3" },
   { title: "Lisboa", src: "music/Lisboa.mp3" },
-  { title: "Música 3", src: "music/musica3.mp3" }
+  { title: "Vicio de Amor", src: "music/Viciodeamor.mp3" },
+  { title: "Pupila", src: "music/Pupila.mp3" },
+  { title: "Afrodite", src: "music/Afrodite.mp3" },
 ];
 
 let currentTrackIndex = 0;
@@ -210,7 +212,7 @@ function applyTypingEffect(pageElement) {
           clearInterval(interval);
           resolve();
         }
-      }, 150); // Velocidade entre letras
+      }, 70); // Velocidade entre letras
     });
 
     typingPromises.push(promise);

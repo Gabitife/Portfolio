@@ -49,7 +49,7 @@ html {
   position: absolute;
   opacity: 70%;
   max-height: 500px;
-  transition: opacity 2s ease, transform 3s ease !important;
+  transition: opacity 1s ease, transform 3s ease !important;
   will-change: transform, opacity !important;
   animation: fadeInOut 20s infinite ease-in-out !important;
   filter: blur(1px);
