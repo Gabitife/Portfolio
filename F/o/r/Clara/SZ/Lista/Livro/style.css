@@ -52,7 +52,7 @@ html {
   transition: opacity 1s ease, transform 3s ease !important;
   will-change: transform, opacity !important;
   animation: fadeInOut 20s infinite ease-in-out !important;
-  filter: blur(1px);
+  filter: blur(10%);
 }
 
 .background-image img {
@@ -230,7 +230,7 @@ body {
   margin: 0 20px;
   width: calc(100% - 40px);
   max-width: 1400px;
-  height: 650px;
+  height: 625px;
   perspective: 1200px;
   position: relative;
   display: flex;
@@ -293,7 +293,7 @@ body {
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
   line-height: 1.6;
   letter-spacing: 0.05em;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
   max-width: 90%;
   opacity: 1;
@@ -457,11 +457,12 @@ body {
 
   .nav-buttons {
     position: absolute;
+    margin-top: 10%;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0;
   }
 
