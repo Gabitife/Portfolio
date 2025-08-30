@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta103</title>
+
+  <!-- Fonte estilosa -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Troque para o caminho/URL da sua imagem */
+      --bg-image: url('assets/nos.jpg');
+
+      /* Paleta / ajustes */
+      --overlay: rgba(0, 0, 0, 0.651);
+      --text-color: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --accent: #ffffff;
+    }
+
+    /* Resetzinho básico */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text-color);
+      overflow: hidden; /* evita scroll em telas padrão; remova se quiser rolar */
+    }
+
+    /* Fundo em camada (melhor anti-stutter em mobile) */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image: var(--bg-image);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transform: translateZ(0); /* ajuda performance */
+    }
+    .bg::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay); /* leve escurecida para legibilidade */
+    }
+
+    /* Centro responsivo */
+    .center-wrap {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(16px, 3vw, 40px);
+      text-align: center;
+    }
+
+    .title {
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: var(--shadow);
+      max-width: min(900px, 92vw);
+      font-size: clamp(20px, 6vw + 8px, 62px);
+      letter-spacing: 0.02em;
+      /* efeito cursor */
+      border-right: .12em solid rgba(255,255,255,.85);
+      white-space: pre-wrap; /* mantém quebras manualmente, se quiser */
+      overflow: hidden; /* esconde enquanto digita */
+      padding: 0 .05em;
+    }
+
+    /* Botão de download (ícone) */
+    .dl {
+      position: fixed;
+      right: clamp(12px, 2.5vw, 24px);
+      bottom: clamp(12px, 2.5vw, 24px);
+      width: 56px;
+      height: 56px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(0,0,0,.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--accent);
+      transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
+      outline: none;
+    }
+    .dl:hover { transform: translateY(-2px); background: rgba(0,0,0,.6); }
+    .dl:active { transform: translateY(0); }
+    .dl:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,.35), var(--shadow); }
+
+    /* SVG dentro do botão */
+    .dl svg { width: 28px; height: 28px; display: block; }
+
+    /* Preferência de usuários que pedem menos animação */
+    @media (prefers-reduced-motion: reduce) {
+      .title { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fundo -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- Texto central -->
+  <main class="center-wrap">
+    <!-- Coloque seu texto no data-text abaixo -->
+    <h1 class="title" id="typewriter" data-text="Oiee meu amor. Hahaha sei que não gosta de desenhos de anime, mas espero que este voce possa gostar, 
+    feito com carinho e amor."></h1>
+  </main>
+
+  <!-- Botão de download (apenas ícone) -->
+  <a id="downloadBtn" class="dl" href="#" download="background.jpg" aria-label="Baixar imagem de fundo" title="Baixar imagem de fundo">
+    <!-- Ícone de download em SVG (leve e sem dependências) -->
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 0 1 8.707 11.293L11 13.586V4a1 1 0 0 1 1-1ZM5 19a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z"/>
+    </svg>
+  </a>
+
+  <script>
+    // ---- Typewriter (letra por letra) ----
+    (function () {
+      const el = document.getElementById('typewriter');
+      const text = el.getAttribute('data-text') || '';
+      const speed = 22; // ms por caractere
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced) {
+        el.textContent = text;
+        el.style.borderRight = 'none';
+        return;
+      }
+
+      el.textContent = '';
+      let i = 0;
+      const tick = () => {
+        if (i <= text.length) {
+          el.textContent = text.slice(0, i);
+          i++;
+          requestAnimationFrame(() => setTimeout(tick, speed));
+        } else {
+          // Após terminar, remove o cursor depois de um tempo opcional
+          setTimeout(() => { el.style.borderRight = 'none'; }, 800);
+        }
+      };
+      tick();
+    })();
+
+    // ---- Botão: baixar a própria imagem de background ----
+    (function () {
+      const link = document.getElementById('downloadBtn');
+
+      // Lê a variável CSS --bg-image (espera algo como: url("bg.jpg"))
+      const raw = getComputedStyle(document.documentElement).getPropertyValue('--bg-image').trim();
+
+      // Extrai a URL de dentro de url("...")
+      const match = raw.match(/url\((['"]?)(.*?)\1\)/i);
+      const imageUrl = match ? match[2] : 'bg.jpg';
+
+      // Configura o link para baixar
+      link.href = imageUrl;
+
+      // Sugerir um nome de arquivo amigável, se possível
+      try {
+        const u = new URL(imageUrl, window.location.href);
+        const nameGuess = u.pathname.split('/').pop() || 'background.jpg';
+        link.setAttribute('download', nameGuess);
+      } catch (e) {
+        // fallback já definido no HTML
+      }
+    })();
+  </script>
+</body>
+</html>
